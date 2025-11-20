@@ -446,3 +446,63 @@ button:hover {
   font-size: 12px;
 }
 
+/* ===== Cities pages ===== */
+.city-page {
+  max-width: 1100px;
+  width: 95%;
+  margin: 24px auto 40px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 22px 26px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.city-header h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #1a73e8;
+}
+
+.city-header p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.city-card {
+  border-radius: 14px;
+  border: 1px solid #e1e7ff;
+  background: #f9fbff;
+  padding: 10px 13px 12px;
+  font-size: 13px;
+}
+
+.city-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #1f4fd0;
+}
+
+.city-meta {
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.city-page h2 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #1a73e8;
+}
+
+.city-page ul {
+  margin-top: 4px;
+}
