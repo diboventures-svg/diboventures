@@ -1,0 +1,150 @@
+/* General styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #1a73e8;
+  color: white;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.logo-main {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-sub {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  width: 100%;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 10px;
+}
+
+.hero-banner {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slogan-box {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Main content */
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 20px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+.main-column {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #1a73e8;
+}
+
+/* Arabic text box */
+.arabic-section {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Footer */
+.site-footer {
+  background: #1a73e8;
+  color: white;
+  padding: 25px 10px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-right a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
