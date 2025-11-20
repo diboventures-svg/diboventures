@@ -1,4 +1,4 @@
-/* ====== Base ====== */
+/* ========= Reset بسيط ========= */
 * {
   box-sizing: border-box;
 }
@@ -6,51 +6,64 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background: #f4f6fb;
-  color: #1f2933;
+  background: #f4f4f4;
+  color: #222;
 }
 
-/* ====== Containers ====== */
+/* ========= هيدر / نافبار ========= */
+header {
+  background: #1a73e8;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 .container {
   width: 95%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* ====== Header / Navbar ====== */
-header {
-  background: #1565d8;
-  color: #fff;
-  padding: 14px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 12px 0;
 }
 
-.logo-box {
+.logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.logo-title {
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 800;
-  letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
-.logo-sub {
-  font-size: 12px;
-  opacity: 0.95;
+.logo-text-main {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.5px;
 }
 
-.nav-links a {
+.logo-text-sub {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 18px;
@@ -58,20 +71,25 @@ header {
   font-weight: 600;
 }
 
-.nav-links a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-/* ====== Hero ====== */
+/* ========= الصفحة ========= */
+.page {
+  padding: 24px 0 40px;
+}
+
+/* ========= الهيرو (البانر) ========= */
 .hero {
-  margin-top: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-inner {
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(15,23,42,0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .hero-banner img {
@@ -79,41 +97,37 @@ header {
   display: block;
 }
 
-.hero-content {
-  padding: 14px 20px 18px;
+.hero-slogan {
+  padding: 10px 16px 14px;
   text-align: center;
-  border-top: 1px solid #edf2ff;
+  border-top: 1px solid #eee;
 }
 
-.hero-tagline {
+.hero-slogan span {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
   background: #eaf2ff;
-  color: #1f4fd0;
+  color: #1a73e8;
   font-size: 13px;
   font-weight: 600;
 }
 
-/* ====== Main layout ====== */
-.main-section {
-  margin-top: 26px;
-  margin-bottom: 50px;
-}
-
-.main-card {
+/* ========= الكارت الرئيسي (إنجليزي + عربي) ========= */
+.card {
   background: #fff;
   border-radius: 18px;
-  padding: 24px 22px 26px;
-  box-shadow: 0 6px 18px rgba(15,23,42,0.1);
+  padding: 22px 22px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
 }
 
 .main-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 26px;
+  gap: 28px;
 }
 
 @media (max-width: 900px) {
@@ -122,117 +136,108 @@ header {
   }
 }
 
-/* English column */
 .main-grid h1 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #1565d8;
   font-size: 24px;
+  color: #1a73e8;
 }
 
 .main-grid p {
-  line-height: 1.6;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .main-grid h2 {
   margin-top: 18px;
   margin-bottom: 8px;
-  color: #1565d8;
   font-size: 18px;
+  color: #1a73e8;
 }
 
 ul {
-  padding-left: 18px;
   margin-top: 0;
+  padding-left: 18px;
   font-size: 14px;
 }
 
-/* Arabic column */
+/* عمود عربي */
 .arabic-box {
   direction: rtl;
   text-align: right;
-  border-radius: 14px;
   background: #f8fafc;
-  padding: 16px 16px 10px;
+  border-radius: 14px;
+  padding: 14px 14px 10px;
 }
 
 .arabic-box h2 {
   margin-top: 0;
-  color: #1565d8;
-  font-size: 18px;
+  color: #1a73e8;
 }
 
 /* QR */
 .qr-box {
-  margin-top: 18px;
+  margin-top: 16px;
   text-align: center;
+}
+
+.qr-box p {
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 
 .qr-box img {
   max-width: 210px;
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(15,23,42,0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
-/* ====== Why Italy section ====== */
-.why-italy {
-  margin-top: 18px;
+/* ========= ليه إيطاليا ========= */
+.section-title {
+  font-size: 20px;
+  color: #1a73e8;
+  margin: 0 0 8px;
 }
 
-.why-italy-grid {
+.section-sub {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 8px;
 }
 
-.card {
+.feature-card {
   background: #f9fbff;
   border-radius: 14px;
-  padding: 14px 14px 16px;
+  padding: 12px 14px 14px;
   border: 1px solid #e1e7ff;
+  font-size: 13px;
 }
 
-.card h3 {
+.feature-card h3 {
   margin: 0 0 6px;
   color: #1f4fd0;
   font-size: 15px;
 }
 
-/* ====== Cities section ====== */
-.cities {
-  margin-top: 28px;
-}
-
-.city-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-  margin-top: 10px;
-}
-
+/* ========= المدن ========= */
 .city-tag {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 999px;
   background: #eaf2ff;
-  font-size: 11px;
   color: #1f4fd0;
+  font-size: 11px;
   margin-bottom: 6px;
 }
 
-/* ====== Universities section ====== */
-.universities {
-  margin-top: 30px;
-}
-
-.section-title {
-  font-size: 20px;
-  color: #1565d8;
-  margin-bottom: 6px;
-}
-
+/* ========= الجامعات + سيرش ========= */
 .univ-controls {
   display: flex;
   flex-wrap: wrap;
@@ -256,9 +261,9 @@ ul {
 }
 
 .univ-card {
+  background: #f9fbff;
   border-radius: 14px;
   border: 1px solid #e1e7ff;
-  background: #f9fbff;
   padding: 10px 13px 12px;
   font-size: 13px;
 }
@@ -275,14 +280,14 @@ ul {
   margin-bottom: 4px;
 }
 
-/* ====== Footer ====== */
+/* ========= الفوتر ========= */
 footer {
-  background: #1565d8;
+  background: #1a73e8;
   color: #fff;
   text-align: center;
-  padding: 16px 10px 20px;
+  padding: 16px 10px 22px;
   font-size: 13px;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 footer a {
@@ -290,19 +295,19 @@ footer a {
   text-decoration: underline;
 }
 
-/* ====== Floating WhatsApp ====== */
+/* ========= زر واتساب العائم ========= */
 .whatsapp-float {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  background: #25D366;
+  background: #25d366;
   color: #fff;
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 30px;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -317,21 +322,21 @@ footer a {
   transform: scale(1.05);
 }
 
-/* ====== Responsive tweaks ====== */
+/* ========= موبايل ========= */
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
 
-  .nav-links a {
+  nav a {
     margin-left: 0;
     margin-right: 14px;
     font-size: 13px;
   }
 
-  .main-card {
-    padding: 18px 14px 20px;
+  .card {
+    padding: 18px 14px 22px;
   }
 }
