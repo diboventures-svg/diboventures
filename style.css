@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* header bar */
+header {
+    background: #1a73e8;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logo-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.logo-text {
+    text-align: left;
+}
+
+.logo-main {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.logo-main .dibo {
+    color: #f4d35e;
+}
+
+.logo-main .ventures {
+    color: #ffffff;
+    margin-left: 3px;
+}
+
+.logo-sub {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+/* navigation */
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* banner image */
+.hero-banner {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* main white box */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px 20px 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+h2 {
+    color: #1a73e8;
+}
+
+/* ARABIC section */
+.arabic-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    direction: rtl;
+    text-align: right;
+    font-size: 14px;
+}
+
+.arabic-section h2 {
+    color: #b22222;
+}
+
+/* force LTR for numbers inside RTL text */
+.ltr {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
+
+/* forms */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background: #1a73e8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #155ab8;
+}
+
+/* QR section */
+.qr-box {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.qr-box img {
+    max-width: 220px;
+    border-radius: 16px;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* links inside container */
+.container a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25d366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+.whatsapp-float span {
+    margin-left: 6px;
+}
+
