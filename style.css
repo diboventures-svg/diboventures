@@ -1,152 +1,288 @@
-/* ====== Base styles ====== */
+/* ====== Base ====== */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2933;
+}
+
+/* ====== Containers ====== */
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* ====== Header / Navbar ====== */
 header {
-  background: #1a73e8;
+  background: #1565d8;
   color: #fff;
-  padding: 12px 24px;
+  padding: 14px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-header .brand {
+.logo-box {
   display: flex;
   flex-direction: column;
 }
 
-header .brand-title {
+.logo-title {
+  font-weight: 800;
+  letter-spacing: 1px;
   font-size: 20px;
-  font-weight: bold;
 }
 
-header .brand-sub {
+.logo-sub {
   font-size: 12px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-header nav a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  margin-left: 16px;
+  margin-left: 18px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-header nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* ====== Hero / Banner ====== */
-.hero-wrapper {
-  max-width: 1100px;
-  width: 95%;
-  margin: 24px auto 0;
+/* ====== Hero ====== */
+.hero {
+  margin-top: 24px;
 }
 
-.hero-card {
+.hero-inner {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.25);
 }
 
-.hero-card img {
+.hero-banner img {
   width: 100%;
   display: block;
 }
 
-.hero-slogan {
-  padding: 12px;
+.hero-content {
+  padding: 14px 20px 18px;
   text-align: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #edf2ff;
 }
 
-.hero-slogan button {
-  background: #1a73e8;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: bold;
+.hero-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #1f4fd0;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.hero-slogan button:hover {
-  opacity: 0.9;
-}
-
-/* ====== Content card ====== */
-.container {
-  max-width: 1100px;
-  width: 95%;
-  margin: 24px auto 40px;
+/* ====== Main layout ====== */
+.main-section {
+  margin-top: 26px;
+  margin-bottom: 50px;
 }
 
 .main-card {
   background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 24px 22px 26px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.1);
 }
 
 .main-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 26px;
 }
 
-h1 {
-  margin-top: 0;
-  color: #1a73e8;
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-h2 {
-  color: #1a73e8;
+/* English column */
+.main-grid h1 {
   margin-top: 0;
+  margin-bottom: 10px;
+  color: #1565d8;
+  font-size: 24px;
+}
+
+.main-grid p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.main-grid h2 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1565d8;
+  font-size: 18px;
 }
 
 ul {
   padding-left: 18px;
+  margin-top: 0;
+  font-size: 14px;
 }
 
-/* ====== Arabic column ====== */
+/* Arabic column */
 .arabic-box {
   direction: rtl;
   text-align: right;
+  border-radius: 14px;
+  background: #f8fafc;
+  padding: 16px 16px 10px;
 }
 
-/* ====== QR box ====== */
+.arabic-box h2 {
+  margin-top: 0;
+  color: #1565d8;
+  font-size: 18px;
+}
+
+/* QR */
 .qr-box {
-  margin-top: 20px;
+  margin-top: 18px;
   text-align: center;
 }
 
 .qr-box img {
-  max-width: 220px;
+  max-width: 210px;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(15,23,42,0.2);
+}
+
+/* ====== Why Italy section ====== */
+.why-italy {
+  margin-top: 18px;
+}
+
+.why-italy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.card {
+  background: #f9fbff;
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  border: 1px solid #e1e7ff;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  color: #1f4fd0;
+  font-size: 15px;
+}
+
+/* ====== Cities section ====== */
+.cities {
+  margin-top: 28px;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.city-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  font-size: 11px;
+  color: #1f4fd0;
+  margin-bottom: 6px;
+}
+
+/* ====== Universities section ====== */
+.universities {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #1565d8;
+  margin-bottom: 6px;
+}
+
+.univ-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.univ-controls input,
+.univ-controls select {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid #d0d7ff;
+  font-size: 13px;
+  outline: none;
+}
+
+.univ-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.univ-card {
+  border-radius: 14px;
+  border: 1px solid #e1e7ff;
+  background: #f9fbff;
+  padding: 10px 13px 12px;
+  font-size: 13px;
+}
+
+.univ-card h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: #1f4fd0;
+}
+
+.univ-meta {
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 4px;
 }
 
 /* ====== Footer ====== */
 footer {
-  background: #1a73e8;
+  background: #1565d8;
   color: #fff;
   text-align: center;
-  padding: 16px 10px 22px;
+  padding: 16px 10px 20px;
   font-size: 13px;
+  margin-top: 40px;
 }
 
 footer a {
@@ -154,7 +290,7 @@ footer a {
   text-decoration: underline;
 }
 
-/* ====== Floating WhatsApp button ====== */
+/* ====== Floating WhatsApp ====== */
 .whatsapp-float {
   position: fixed;
   right: 18px;
@@ -165,7 +301,7 @@ footer a {
   padding: 10px 16px;
   border-radius: 30px;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 600;
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
@@ -181,19 +317,21 @@ footer a {
   transform: scale(1.05);
 }
 
-/* ====== Small screens ====== */
+/* ====== Responsive tweaks ====== */
 @media (max-width: 600px) {
-  header {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
 
-  header nav {
-    margin-top: 8px;
-  }
-
-  header nav a {
+  .nav-links a {
     margin-left: 0;
     margin-right: 14px;
+    font-size: 13px;
+  }
+
+  .main-card {
+    padding: 18px 14px 20px;
   }
 }
