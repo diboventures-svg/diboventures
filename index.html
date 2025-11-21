@@ -66,49 +66,91 @@
       <button type="button" data-lang="ar">AR</button>
     </div>
   </div>
-  <!-- Internal important links section -->
-  <section class="container internal-links-section">
-    <h2 class="internal-links-title">Important Links · روابط مهمة</h2>
+    <!-- Internal important links section as tabs -->
+  <section class="container internal-tabs">
+    <h2 class="internal-tabs-title">Explore DiboVentures · اختار اللي يهمك</h2>
 
-    <div class="internal-links-grid">
+    <div class="tab-buttons">
+      <button class="tab-button active" data-tab="programs">Programs | البرامج</button>
+      <button class="tab-button" data-tab="universities">Universities | الجامعات</button>
+      <button class="tab-button" data-tab="cities">Cities | المدن</button>
+    </div>
 
-      <!-- Programs -->
-      <div class="internal-links-block">
-        <h3>Programs | البرامج</h3>
-        <ul>
-          <li><a href="bachelor.html">Bachelor in Italy – البكالوريوس في إيطاليا</a></li>
-          <li><a href="master.html">Master in Italy – الماجستير في إيطاليا</a></li>
-          <li><a href="scholarships.html">Scholarships – المنح الدراسية</a></li>
-        </ul>
+    <div class="tab-panels">
+
+      <!-- Programs tab -->
+      <div class="tab-panel active" id="tab-programs">
+        <div class="tab-grid">
+          <a href="bachelor.html" class="tab-link">
+            <strong>Bachelor in Italy</strong>
+            <span>البكالوريوس في إيطاليا · شروط وأوراق وخطوات</span>
+          </a>
+          <a href="master.html" class="tab-link">
+            <strong>Master in Italy</strong>
+            <span>الماجستير بالإنجليزي أو الإيطالي · برامج قوية</span>
+          </a>
+          <a href="scholarships.html" class="tab-link">
+            <strong>Scholarships</strong>
+            <span>منح الأقاليم والجامعات · تخفيض مصاريف الدراسة</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Universities -->
-      <div class="internal-links-block">
-        <h3>Top Universities | أهم الجامعات</h3>
-        <ul>
-          <li><a href="universities.html">All Universities List – قائمة الجامعات</a></li>
-          <li><a href="universities.html">Politecnico di Milano</a></li>
-          <li><a href="universities.html">University of Bologna</a></li>
-          <li><a href="universities.html">Sapienza University of Rome</a></li>
-          <li><a href="universities.html">Università Politecnica delle Marche (UNIVPM)</a></li>
-        </ul>
+      <!-- Universities tab -->
+      <div class="tab-panel" id="tab-universities">
+        <div class="tab-grid">
+          <a href="universities.html" class="tab-link">
+            <strong>All Universities</strong>
+            <span>قائمة كاملة بأهم الجامعات الإيطالية</span>
+          </a>
+          <a href="universities.html" class="tab-link">
+            <strong>Politecnico di Milano</strong>
+            <span>أقوى جامعات الهندسة والتصميم في أوروبا</span>
+          </a>
+          <a href="universities.html" class="tab-link">
+            <strong>University of Bologna</strong>
+            <span>أقدم جامعة في العالم · مدينة طلاب من الدرجة الأولى</span>
+          </a>
+          <a href="universities.html" class="tab-link">
+            <strong>Sapienza University of Rome</strong>
+            <span>جامعة كبيرة في العاصمة · تخصصات متنوعة</span>
+          </a>
+          <a href="universities.html" class="tab-link">
+            <strong>UNIVPM – Ancona</strong>
+            <span>هندسة، زراعة، بحرية · مناسبة لطلاب كتير من الوطن العربي</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Cities -->
-      <div class="internal-links-block">
-        <h3>Study Cities | مدن الدراسة</h3>
-        <ul>
-          <li><a href="cities.html">All Cities Overview – كل المدن</a></li>
-          <li><a href="cities.html">Study in Milan</a></li>
-          <li><a href="cities.html">Study in Rome</a></li>
-          <li><a href="cities.html">Study in Bologna</a></li>
-          <li><a href="cities.html">Study in Ancona (UNIVPM)</a></li>
-        </ul>
+      <!-- Cities tab -->
+      <div class="tab-panel" id="tab-cities">
+        <div class="tab-grid">
+          <a href="cities.html" class="tab-link">
+            <strong>All Cities Overview</strong>
+            <span>مقارنة سريعة بين أهم مدن الدراسة في إيطاليا</span>
+          </a>
+          <a href="cities.html" class="tab-link">
+            <strong>Milan</strong>
+            <span>مدينة المال والأعمال والموضة والهندسة</span>
+          </a>
+          <a href="cities.html" class="tab-link">
+            <strong>Rome</strong>
+            <span>العاصمة · تاريخ وثقافة وجامعات ضخمة</span>
+          </a>
+          <a href="cities.html" class="tab-link">
+            <strong>Bologna</strong>
+            <span>واحدة من أكبر مدن الطلبة في أوروبا</span>
+          </a>
+          <a href="cities.html" class="tab-link">
+            <strong>Ancona</strong>
+            <span>مدينة ساحلية هادئة · UNIVPM</span>
+          </a>
+        </div>
       </div>
 
     </div>
   </section>
-
+ 
   <!-- MAIN CONTENT -->
   <main id="services">
     <div class="container main-grid">
