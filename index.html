@@ -2,24 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DiboVentures – Study in Italy</title>
+  <title>DiboVentures – Study & Scholarships in Italy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DiboVentures helps students apply for universities and scholarships in Italy (Bachelor & Master) with full support in Arabic and English.">
-  <meta name="keywords" content="DiboVentures, study in Italy, Italian universities, Italy scholarships, bachelor, master, UNIVPM, Politecnico di Milano, Sapienza, Bologna, Milan, Rome, Ancona">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="DiboVentures helps Arabic-speaking students apply for Bachelor, Master and scholarships in Italy. Full support with universities, documents and regional scholarships.">
+  <meta name="keywords" content="DiboVentures, study in Italy, scholarships in Italy, Italian universities, bachelor Italy, master Italy, DSU scholarship">
   <link rel="canonical" href="https://diboventures.com/index.html">
+
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="q_pFVO3gzKgxALFefDA5wNnVRpLcmlycJuYgJYv1RRM">
+
+  <!-- Favicon & logo -->
   <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
   <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="DiboVentures – Study in Italy">
-  <meta property="og:description" content="Apply for Bachelor, Master and scholarships in Italy with DiboVentures.">
-  <meta property="og:url" content="https://diboventures.com/index.html">
+  <meta property="og:title" content="DiboVentures – Study & Scholarships in Italy">
+  <meta property="og:description" content="Apply for Bachelor, Master and scholarships in Italy with step-by-step support from DiboVentures.">
+  <meta property="og:url" content="https://diboventures.com/">
   <meta property="og:image" content="https://diboventures.com/dv-logo.png">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DiboVentures – Study in Italy">
-  <meta name="twitter:description" content="Study in Italy with DiboVentures. We help with universities, scholarships and visa.">
+  <meta name="twitter:title" content="DiboVentures – Study & Scholarships in Italy">
+  <meta name="twitter:description" content="Full guidance for students who want to study in Italy with scholarships.">
   <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Analytics -->
+
+  <!-- Language switch styling (مشترك مع باقي الصفحات) -->
+  <style>
+    .lang-switch {
+      margin: 10px 0 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: #eef2ff;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    }
+    .lang-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #475569;
+      padding: 2px 6px;
+      border-right: 1px solid #cbd5f5;
+      margin-right: 4px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #1e293b;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .lang-btn span {
+      margin-left: 3px;
+      font-size: 11px;
+    }
+    .lang-btn.active {
+      background: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
+    }
+    .lang-section {
+      display: none;
+      font-size: 14px;
+      color: #374151;
+    }
+    .lang-section.active {
+      display: block;
+    }
+
+    /* Hero تحسين */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .hero-title span {
+      color: #1a73e8;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .hero-badge span.flag {
+      font-size: 13px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: 1px solid #cbd5f5;
+      background: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      color: #1e293b;
+      transition: background 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .btn-secondary:hover {
+      background: #eff6ff;
+      border-color: #1d4ed8;
+      box-shadow: 0 4px 10px rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-image-wrap {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 40%);
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Service cards في الهوم */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    .service-card {
+      border-radius: 16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top, #eff6ff 0, #ffffff 55%);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+      border-color: #1d4ed8;
+    }
+    .service-card h3 {
+      margin-bottom: 4px;
+    }
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    /* قسم البايبال */
+    .payment-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, .9fr);
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .payment-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .qr-box {
+      border-radius: 16px;
+      padding: 10px 12px;
+      border: 1px dashed #60a5fa;
+      background: #eff6ff;
+      text-align: center;
+    }
+    .qr-box img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 6px;
+    }
+    .qr-note {
+      font-size: 11px;
+      color: #475569;
+    }
+  </style>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,7 +235,9 @@
     gtag('js', new Date());
     gtag('config', 'G-3W6WCQNRC9');
   </script>
-    <script type="application/ld+json">
+
+  <!-- Structured Data (Organization + Logo) -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -46,7 +256,8 @@
       "availableLanguage": [
         "Arabic",
         "English",
-        "Italian"
+        "Italian",
+        "Turkish"
       ]
     }
   }
@@ -54,6 +265,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="logo">
@@ -66,214 +278,238 @@
         </div>
       </div>
       <nav>
-        <nav>
-  <a href="index.html">Home</a>
-  <a href="bachelor.html">Bachelor</a>
-  <a href="master.html">Master</a>
-  <a href="scholarships.html">Scholarships</a>
-  <a href="universities.html">Universities</a>
-  <a href="cities.html">Cities</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="bachelor.html">Bachelor</a>
+        <a href="master.html">Master</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="universities.html">Universities</a>
+        <a href="cities.html">Cities</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero poster -->
-  <section class="hero">
-    <img src="banner.jpg" alt="DiboVentures banner" class="hero-banner">
-    <div class="slogan-box">
-      With you to your dream university in Italy 🇮🇹
-    </div>
-  </section>
+  <main class="page-wrap">
 
-  <div class="container">
-
-    <!-- EN + AR text -->
-    <div class="main-grid">
-      <!-- English -->
-      <div class="main-column">
-        <h2>Study in Italy with DiboVentures 🇮🇹</h2>
-        <p>
-          Travel isn’t just about a plane ticket or a suitcase — it’s the beginning of a new chapter in your life.
-          Many people overthink it: paperwork, universities, flights, fear of living abroad...
-          But honestly? It’s much easier when you have a clear plan and the right people to guide you.
-        </p>
-        <p>
-          At <strong>DIBOVENTURES</strong>, we help you choose the right university for your goals,
-          and guide you through every step of the application — simple, clear, and stress-free.
-          We also help you book your flight at the best possible price, so you can travel comfortably and confidently.
-        </p>
-        <h3>Our main services</h3>
-        <ul>
-          <li>University applications (Bachelor &amp; Master)</li>
-          <li>Scholarship guidance and applications</li>
-          <li>Visa &amp; documents consultation</li>
-          <li>Flight booking and travel support</li>
-          <li>Accommodation and basic settlement tips</li>
-        </ul>
-        <p style="margin-top:10px;">
-          Your journey starts here 👇<br>
-          📞 <span class="ltr">+39 393 632 3613</span><br>
-          📸 Instagram: <strong>@diboventures</strong>
-        </p>
-      </div>
-
-      <!-- Arabic -->
-      <div class="main-column">
-        <section class="arabic-section">
-          <h2>الدراسة في إيطاليا مع DIBOVENTURES 🇮🇹</h2>
-          <p>
-            السفر مش مجرد تذكرة طيران وشنطة، ده بداية فصل جديد في حياتك.  
-            ناس كتير بتقلق من الورق، الجامعات، الطيران، السكن، والعيش بره...
-            لكن في الحقيقة، الموضوع أسهل بكتير لما يكون معاك خطة واضحة وحد يمشي معاك خطوة بخطوة.
-          </p>
-          <p>
-            في <strong>DIBOVENTURES</strong> بنساعدك تختار التخصص والجامعة المناسبة ليك،
-            وبنرشدك في كل مراحل التقديم لحد القبول والمنحة والفيزا إن شاء الله.
-          </p>
-          <p>بنقدم لك:</p>
-          <ul>
-            <li>التقديم على الجامعات الإيطالية (بكالوريوس / ماجستير)</li>
-            <li>التقديم على المنح الدراسية وتجهيز المستندات</li>
-            <li>مساعدة في تجهيز أوراق الفيزا والاستفسارات</li>
-            <li>حجز طيران بأفضل سعر ممكن</li>
-            <li>إرشادات عن السكن والحياة في إيطاليا</li>
-          </ul>
-          <p>
-            للتواصل المباشر وواتساب:
-            <strong><span class="ltr">+39 393 632 3613</span></strong>
-          </p>
-        </section>
-      </div>
-    </div>
-
-    <!-- Internal Tabs -->
-    <section class="internal-tabs">
-      <h2 class="internal-tabs-title">Explore DiboVentures · اختار اللي يهمك</h2>
-
-      <div class="tab-buttons">
-        <button class="tab-button active" data-tab="programs">Programs | البرامج</button>
-        <button class="tab-button" data-tab="universities">Universities | الجامعات</button>
-        <button class="tab-button" data-tab="cities">Cities | المدن</button>
-      </div>
-
-      <div class="tab-panels">
-        <!-- Programs tab -->
-        <div class="tab-panel active" id="tab-programs">
-          <div class="tab-grid">
-            <a href="bachelor.html" class="tab-link">
-              <strong>Bachelor in Italy</strong>
-              <span>البكالوريوس في إيطاليا – الشروط، الأوراق، وطريقة التقديم.</span>
-            </a>
-            <a href="master.html" class="tab-link">
-              <strong>Master in Italy</strong>
-              <span>ماجستير بالإنجليزي أو الإيطالي في جامعات قوية.</span>
-            </a>
-            <a href="scholarships.html" class="tab-link">
-              <strong>Scholarships</strong>
-              <span>شرح أنواع المنح وكيفية التقديم عليها.</span>
-            </a>
+    <!-- HERO + LANG TABS -->
+    <section class="card">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="flag">🇮🇹</span>
+            <span>Study &amp; Scholarships in Italy</span>
           </div>
+          <h1 class="hero-title">
+            With you to your <span>dream university</span> in Italy
+          </h1>
+
+          <div class="lang-switch">
+            <span class="lang-label">Languages</span>
+            <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
+            <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
+            <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
+            <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
+          </div>
+
+          <!-- EN -->
+          <div class="lang-section active" data-lang="en">
+            <p>
+              DiboVentures helps you apply for <strong>Bachelor</strong>, <strong>Master</strong> and
+              <strong>scholarships</strong> in Italy — with clear steps, bilingual support and honest guidance.
+            </p>
+            <p>
+              You don’t have to stress about documents, deadlines and Italian websites.
+              We simplify everything, propose universities that match your profile,
+              and stay with you from application to arrival.
+            </p>
+          </div>
+
+          <!-- AR -->
+          <div class="lang-section" data-lang="ar">
+            <section class="arabic-section">
+              <p>
+                <strong>DiboVentures</strong> بتساعدك تقدّم على
+                <strong>بكالوريوس</strong> أو <strong>ماستر</strong> أو <strong>منح دراسية</strong> في إيطاليا،
+                بخطوات واضحة ودعم كامل بالعربي والإنجليزي.
+              </p>
+              <p>
+                مش لازم تقلق من الورق، المواعيد، أو المواقع الإيطالية.
+                إحنا بنبسط لك كل حاجة، ونرشح لك جامعات مناسبة لمجموعك وميزانيتك،
+                وبنفضّل معاك من أول التقديم لحد ما توصل بإذن الله.
+              </p>
+            </section>
+          </div>
+
+          <!-- IT -->
+          <div class="lang-section" data-lang="it">
+            <p>
+              <strong>DiboVentures</strong> supporta gli studenti che vogliono iscriversi a
+              <strong>laurea triennale</strong>, <strong>magistrale</strong> e ottenere
+              <strong>borse di studio</strong> in Italia.
+            </p>
+            <p>
+              Ti aiutiamo con i documenti, le scadenze e la scelta dell’università,
+              offrendo comunicazione chiara in più lingue e accompagnandoti fino all’arrivo in Italia.
+            </p>
+          </div>
+
+          <!-- TR -->
+          <div class="lang-section" data-lang="tr">
+            <p>
+              <strong>DiboVentures</strong>, İtalya’da <strong>lisans</strong>, <strong>yüksek lisans</strong>
+              ve <strong>burs başvuruları</strong> için sana adım adım destek verir.
+            </p>
+            <p>
+              Belgeler, son başvuru tarihleri ve İtalyanca siteler için endişelenmene gerek yok;
+              birlikte plan yapıyoruz ve başvurudan İtalya’ya varışına kadar yanında oluyoruz.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="bachelor.html" class="btn-primary">🎓 Apply for Bachelor</a>
+            <a href="master.html" class="btn-secondary">🎓 Apply for Master</a>
+            <a href="scholarships.html" class="btn-secondary">💶 Scholarships</a>
+          </div>
+
+          <p style="margin-top:10px; font-size:13px; color:#475569;">
+            WhatsApp:
+            <strong><span class="ltr">+39 393 632 3613</span></strong> • Instagram:
+            <strong>@diboventures</strong>
+          </p>
         </div>
 
-        <!-- Universities tab -->
-        <div class="tab-panel" id="tab-universities">
-          <div class="tab-grid">
-            <a href="universities.html" class="tab-link">
-              <strong>All Universities</strong>
-              <span>قائمة بأهم الجامعات الإيطالية في مدن مختلفة.</span>
-            </a>
-            <a href="universities.html" class="tab-link">
-              <strong>Politecnico di Milano</strong>
-              <span>من أقوى جامعات الهندسة والتصميم في أوروبا.</span>
-            </a>
-            <a href="universities.html" class="tab-link">
-              <strong>University of Bologna</strong>
-              <span>أقدم جامعة في العالم ومدينة طلابية ممتازة.</span>
-            </a>
-            <a href="universities.html" class="tab-link">
-              <strong>Sapienza University of Rome</strong>
-              <span>جامعة كبيرة في قلب العاصمة روما.</span>
-            </a>
-            <a href="universities.html" class="tab-link">
-              <strong>UNIVPM – Ancona</strong>
-              <span>جامعة قوية في مدينة ساحلية هادئة.</span>
-            </a>
-          </div>
+        <div class="hero-image-wrap">
+          <!-- حافظ على اسم صورة البانر اللي عندك في GitHub -->
+          <img src="banner.jpg" alt="DiboVentures banner – Study in Italy">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES OVERVIEW -->
+    <section class="card">
+      <h2>What we help you with / إزاي بنساعدك؟</h2>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-tag">🎓 Bachelor • بكالوريوس</div>
+          <h3>Bachelor in Italy</h3>
+          <p style="font-size:14px;">
+            اختيار الجامعات المناسبة لمجموعك، تجهيز الورق، والتقديم على أكتر من جامعة لرفع نسبة القبول.
+          </p>
+          <a href="bachelor.html" class="btn-secondary" style="margin-top:8px;">
+            تفاصيل البكالوريوس
+          </a>
         </div>
 
-        <!-- Cities tab -->
-        <div class="tab-panel" id="tab-cities">
-          <div class="tab-grid">
-            <a href="cities.html" class="tab-link">
-              <strong>All Cities Overview</strong>
-              <span>مقارنة بين أهم مدن الدراسة من حيث المعيشة والجامعات.</span>
-            </a>
-            <a href="cities.html" class="tab-link">
-              <strong>Milan</strong>
-              <span>مدينة المال والأعمال والموضة والجامعات الهندسية.</span>
-            </a>
-            <a href="cities.html" class="tab-link">
-              <strong>Rome</strong>
-              <span>العاصمة، تاريخ وثقافة وجامعات كبيرة.</span>
-            </a>
-            <a href="cities.html" class="tab-link">
-              <strong>Bologna</strong>
-              <span>من أكبر المدن الطلابية في أوروبا.</span>
-            </a>
-            <a href="cities.html" class="tab-link">
-              <strong>Ancona</strong>
-              <span>مدينة ساحلية هادئة فيها جامعة UNIVPM.</span>
-            </a>
+        <div class="service-card">
+          <div class="service-tag">🎓 Master • ماستر</div>
+          <h3>Master in Italy</h3>
+          <p style="font-size:14px;">
+            برامج إنجليزي في جامعات قوية، مع CV، Motivation Letter، وخطابات توصية عند الحاجة.
+          </p>
+          <a href="master.html" class="btn-secondary" style="margin-top:8px;">
+            تفاصيل الماجستير
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tag">💶 Scholarships • منح</div>
+          <h3>Scholarships &amp; DSU</h3>
+          <p style="font-size:14px;">
+            شرح شروط المنح، كشف الحساب البنكي، والتقديم على منح الأقاليم بعد القبول الجامعي.
+          </p>
+          <a href="scholarships.html" class="btn-secondary" style="margin-top:8px;">
+            تفاصيل المنح
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT & STAGES -->
+    <section class="card">
+      <h2>Stages &amp; Fees / المراحل والتكلفة</h2>
+      <div class="payment-grid">
+        <div>
+          <section class="arabic-section">
+            <h3>١) مرحلة التقديم والقبول الجامعي</h3>
+            <p>
+              💰 التكلفة الكاملة: <span class="ltr">350 €</span><br>
+              🔹 <strong>100 €</strong> في البداية للتقديم على أكتر من جامعة.<br>
+              🔹 <strong>250 €</strong> بعد القبول واستلام الإيميل والباسورد.
+            </p>
+
+            <h3>٢) مرحلة التقديم على المنحة</h3>
+            <p>
+              💰 التكلفة الكاملة: <span class="ltr">350 €</span><br>
+              🔹 <strong>150 €</strong> قبل التقديم على المنحة.<br>
+              🔹 <strong>200 €</strong> بعد الحصول على المنحة بإذن الله.
+            </p>
+
+            <p style="font-size:13px; color:#4b5563;">
+              الدفع ممكن يكون عن طريق PayPal أو طرق تانية نتفق عليها سوا على واتساب.
+            </p>
+          </section>
+        </div>
+
+        <div>
+          <div class="qr-box">
+            <!-- غيّر اسم الصورة حسب اسم ملف الـ QR في الريبو لو مختلف -->
+            <img src="paypal-qr.png" alt="PayPal QR - DiboVentures">
+            <div class="qr-note">
+              Scan to pay via PayPal<br>
+              or use link:<br>
+              <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank">
+                paypal.me/MAHMOUDABOUDIB
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- QR + PayPal (اختياري تعدل الصورة) -->
-    <div class="qr-box">
-      <p>Pay your service fee via PayPal:</p>
-      <p>
-        <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank" style="color:#1a73e8;font-weight:600;">
-          PayPal.me/MAHMOUDABOUDIB
-        </a>
-      </p>
-    </div>
+    <!-- QUICK LINKS TO INFO PAGES -->
+    <section class="card">
+      <h2>Explore more about studying in Italy</h2>
+      <ul style="font-size:14px; color:#374151;">
+        <li>📚 <a href="universities.html">Universities in Italy / الجامعات</a></li>
+        <li>🏙 <a href="cities.html">Cities &amp; student life / المدن والحياة الطلابية</a></li>
+        <li>ℹ️ <a href="about.html">About DiboVentures / من نحن؟</a></li>
+        <li>📩 <a href="contact.html">Contact form &amp; WhatsApp / تواصل معنا</a></li>
+      </ul>
+    </section>
 
-  </div>
+  </main>
 
-  <!-- Floating WhatsApp -->
+  <!-- WhatsApp floating button -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
 
   <footer>
     <div class="footer-inner">
-      <div>© DiboVentures — All rights reserved. • Study in Italy • Student Services</div>
+      <div>© DiboVentures — All rights reserved. • Study &amp; Scholarships in Italy</div>
       <div>
-        <a href="https://instagram.com/diboventures" target="_blank">@diboventures</a>
+        <a href="index.html">Home</a>
+        <a href="bachelor.html">Bachelor</a>
+        <a href="master.html">Master</a>
       </div>
     </div>
   </footer>
 
-  <!-- Tabs script -->
+  <!-- Language switch script (نفس اللي في الصفحات التانية) -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('.tab-button');
-      const panels = {
-        programs: document.getElementById('tab-programs'),
-        universities: document.getElementById('tab-universities'),
-        cities: document.getElementById('tab-cities')
-      };
+      const buttons = document.querySelectorAll('.lang-btn');
+      const sections = document.querySelectorAll('.lang-section');
+
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
+          const lang = btn.dataset.lang;
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          const key = btn.dataset.tab;
-          Object.keys(panels).forEach(k => {
-            panels[k].classList.toggle('active', k === key);
+          sections.forEach(sec => {
+            sec.classList.toggle('active', sec.dataset.lang === lang);
           });
         });
       });
