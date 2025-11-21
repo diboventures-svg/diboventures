@@ -1,241 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DiboVentures – Study in Italy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DiboVentures helps students apply for universities and scholarships in Italy (Bachelor & Master) with full support in Arabic and English.">
-    <meta name="keywords" content="DiboVentures, study in Italy, Italian universities, Italy scholarships, bachelor, master, UNIVPM, Politecnico di Milano, Sapienza, Bologna, Ancona">
-    <link rel="canonical" href="https://diboventures.com/index.html">
-    <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
-    <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DiboVentures – Study in Italy">
-    <meta property="og:description" content="Apply for Bachelor, Master and scholarships in Italy with DiboVentures.">
-    <meta property="og:url" content="https://diboventures.com/index.html">
-    <meta property="og:image" content="https://diboventures.com/dv-logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DiboVentures – Study in Italy">
-    <meta name="twitter:description" content="Study in Italy with DiboVentures. We help with universities, scholarships and visa.">
-    <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3W6WCQNRC9');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DiboVentures | Study in Italy</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="dv-logo.png" alt="DiboVentures logo" class="logo-mark">
-            <div class="logo-text">
-                <div class="logo-main">
-                    <span class="dibo">DIBO</span><span class="ventures">VENTURES</span>
-                </div>
-                <div class="logo-sub">Study &amp; Travel • Italy 🇮🇹</div>
-            </div>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="bachelor.html">Bachelor</a>
-            <a href="master.html">Master</a>
-            <a href="scholarships.html">Scholarships</a>
-            <a href="universities.html">Universities</a>
-            <a href="cities.html">Cities</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>DiboVentures</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="bachelor.html">Bachelor</a>
+      <a href="master.html">Master</a>
+      <a href="scholarships.html">Scholarships</a>
+      <a href="universities.html">Universities</a>
+      <a href="cities.html">Cities</a>
+    </nav>
+  </header>
 
-    <!-- Hero section: poster + slogan -->
-    <section class="hero">
-        <img src="banner.jpg" alt="DiboVentures banner" class="hero-banner">
-        <div class="slogan-box">
-            <h2>Your Journey to Italy Starts Here 🇮🇹</h2>
-        </div>
+  <main class="container">
+
+    <!-- Banner -->
+    <section class="banner">
+      <img src="banner.jpg" alt="Study in Italy" class="banner-img" />
+      <div class="banner-text">
+        <h2>With You to Your Dream University</h2>
+        <p>We guide you step-by-step to study in Italy with confidence 🇮🇹</p>
+      </div>
     </section>
 
-    <div class="container">
+    <!-- Internal Tabs Section -->
+    <section class="container internal-tabs">
+      <h2 class="internal-tabs-title">Explore DiboVentures · اختار اللي يهمّك</h2>
 
-        <div class="main-grid">
-            <!-- English side -->
-            <div class="main-column">
-                <h2>Study in Italy with DiboVentures 🇮🇹</h2>
-                <p>
-                    Travel isn’t just about a plane ticket or a suitcase — it’s the beginning of a new chapter in your life.
-                    Many people overthink it: paperwork, universities, flights, fear of living abroad...
-                    But honestly? It’s much easier when you have a clear plan and the right people to guide you.
-                </p>
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="programs">Programs | البرامج</button>
+        <button class="tab-button" data-tab="universities">Universities | الجامعات</button>
+        <button class="tab-button" data-tab="cities">Cities | المدن</button>
+      </div>
 
-                <p>
-                    At <strong>DIBOVENTURES</strong>, we help you choose the right university for your goals,
-                    and guide you through every step of the application — simple, clear, and stress-free.
-                    We also help you book your flight at the best possible price, so you can travel comfortably and confidently.
-                </p>
+      <div class="tab-panels">
 
-                <h2>Our main services</h2>
-                <ul>
-                    <li>University applications in Italy</li>
-                    <li>Scholarship guidance and applications</li>
-                    <li>Visa documents support</li>
-                    <li>Flight booking</li>
-                    <li>Accommodation support</li>
-                </ul>
+        <!-- Programs -->
+        <div class="tab-panel active" id="tab-programs">
+          <div class="tab-grid">
+            <a href="bachelor.html" class="tab-link">
+              <strong>Bachelor in Italy</strong>
+              <span>البكالوريوس في إيطاليا · الشروط والأوراق</span>
+            </a>
 
-                <p style="margin-top: 10px;">
-                    Your journey starts here 👇<br>
-                    📞 <span class="ltr">+39 393 632 3613</span><br>
-                    📸 Instagram: <strong>@diboventures</strong>
-                </p>
-            </div>
+            <a href="master.html" class="tab-link">
+              <strong>Master in Italy</strong>
+              <span>الماجستير بالإنجليزي أو الإيطالي</span>
+            </a>
 
-            <!-- Arabic side -->
-            <div class="main-column">
-                <section class="arabic-section">
-                    <h2>الدراسة في إيطاليا مع DIBOVENTURES 🇮🇹</h2>
-                    <p>
-                        السفر مش مجرد تذكرة طيران وشنطة سفر، دي بداية فصل جديد في حياتك.  
-                        كثير بيقلق من الورق، الجامعات، الطيران، السكن، والعيش بره...  
-                        بس الحقيقة؟ الموضوع أهون بكتير لما يكون معاك خطة واضحة وحد يمشي معاك خطوة بخطوة.
-                    </p>
-                    <p>
-                        في <strong>DIBOVENTURES</strong> بنساعدك تختار التخصص والجامعة المناسبة ليك،  
-                        وبنوجهك في كل مراحل التقديم لغاية ما توصل للقبول والمنحة والفيزا إن شاء الله.
-                    </p>
-                    <p>كمان بنساعدك في:</p>
-                    <ul>
-                        <li>التقديم على الجامعات الإيطالية</li>
-                        <li>التقديم على المنح الدراسية</li>
-                        <li>حجز طيران بأفضل سعر ممكن</li>
-                        <li>حجز سكن وفنادق</li>
-                        <li>استشارات تجهيز واستخراج أوراق السفر</li>
-                    </ul>
-                    <p>
-                        رحلتك بتبدأ من هنا 👇  
-                        تليفون وواتساب:
-                        <strong><span class="ltr">+39 393 632 3613</span></strong>
-                    </p>
-                </section>
-            </div>
+            <a href="scholarships.html" class="tab-link">
+              <strong>Scholarships</strong>
+              <span>منح الأقاليم والجامعات</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Internal navigation tabs -->
-        <section class="internal-tabs">
-            <h2 class="internal-tabs-title">Explore DiboVentures · اختار اللي يهمّك</h2>
+        <!-- Universities -->
+        <div class="tab-panel" id="tab-universities">
+          <div class="tab-grid">
+            <a href="universities.html" class="tab-link">
+              <strong>All Universities</strong>
+              <span>قائمة كاملة بجميع الجامعات</span>
+            </a>
 
-            <div class="tab-buttons">
-                <button class="tab-button active" data-tab="programs">Programs | البرامج</button>
-                <button class="tab-button" data-tab="universities">Universities | الجامعات</button>
-                <button class="tab-button" data-tab="cities">Cities | المدن</button>
-            </div>
+            <a href="universities.html" class="tab-link">
+              <strong>Politecnico di Milano</strong>
+              <span>أقوى جامعة هندسة في أوروبا</span>
+            </a>
 
-            <div class="tab-panels">
-                <!-- Programs -->
-                <div class="tab-panel active" id="tab-programs">
-                    <div class="tab-grid">
-                        <a href="bachelor.html" class="tab-link">
-                            <strong>Bachelor in Italy</strong>
-                            <span>البكالوريوس في إيطاليا · الشروط والأوراق</span>
-                        </a>
-                        <a href="master.html" class="tab-link">
-                            <strong>Master in Italy</strong>
-                            <span>الماجستير بالإنجليزي أو الإيطالي</span>
-                        </a>
-                        <a href="scholarships.html" class="tab-link">
-                            <strong>Scholarships</strong>
-                            <span>منح الأقاليم والجامعات الإيطالية</span>
-                        </a>
-                    </div>
-                </div>
+            <a href="universities.html" class="tab-link">
+              <strong>University of Bologna</strong>
+              <span>أقدم جامعة في العالم</span>
+            </a>
 
-                <!-- Universities -->
-                <div class="tab-panel" id="tab-universities">
-                    <div class="tab-grid">
-                        <a href="universities.html" class="tab-link">
-                            <strong>All Universities</strong>
-                            <span>قائمة بأهم الجامعات الإيطالية.</span>
-                        </a>
-                        <a href="universities.html" class="tab-link">
-                            <strong>Politecnico di Milano</strong>
-                            <span>جامعة قوية للهندسة والتصميم.</span>
-                        </a>
-                        <a href="universities.html" class="tab-link">
-                            <strong>University of Bologna</strong>
-                            <span>أقدم جامعة في العالم، مدينة طلابية ممتازة.</span>
-                        </a>
-                        <a href="universities.html" class="tab-link">
-                            <strong>Sapienza University of Rome</strong>
-                            <span>جامعة كبيرة في روما العاصمة.</span>
-                        </a>
-                        <a href="universities.html" class="tab-link">
-                            <strong>UNIVPM – Ancona</strong>
-                            <span>جامعة مناسبة لطلاب كُثر من الوطن العربي.</span>
-                        </a>
-                    </div>
-                </div>
+            <a href="universities.html" class="tab-link">
+              <strong>Sapienza University of Rome</strong>
+              <span>أكبر جامعة حكومية في روما</span>
+            </a>
 
-                <!-- Cities -->
-                <div class="tab-panel" id="tab-cities">
-                    <div class="tab-grid">
-                        <a href="cities.html" class="tab-link">
-                            <strong>All Cities Overview</strong>
-                            <span>مقارنة بين أهم مدن الدراسة في إيطاليا.</span>
-                        </a>
-                        <a href="cities.html" class="tab-link">
-                            <strong>Milan</strong>
-                            <span>مدينة المال والأعمال والموضة.</span>
-                        </a>
-                        <a href="cities.html" class="tab-link">
-                            <strong>Rome</strong>
-                            <span>العاصمة، تاريخ وثقافة وجامعات كبيرة.</span>
-                        </a>
-                        <a href="cities.html" class="tab-link">
-                            <strong>Bologna</strong>
-                            <span>من أكبر المدن الطلابية في أوروبا.</span>
-                        </a>
-                        <a href="cities.html" class="tab-link">
-                            <strong>Ancona</strong>
-                            <span>مدينة ساحلية هادئة مع UNIVPM.</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="qr-box">
-            <p>Scan to open our Instagram page:</p>
-            <img src="qr-instagram.jpg" alt="Instagram QR">
+            <a href="universities.html" class="tab-link">
+              <strong>UNIVPM – Ancona</strong>
+              <span>جامعة مميزة ومناسبة للطلاب العرب</span>
+            </a>
+          </div>
         </div>
 
-    </div>
+        <!-- Cities -->
+        <div class="tab-panel" id="tab-cities">
+          <div class="tab-grid">
+            <a href="cities.html" class="tab-link">
+              <strong>All Cities Overview</strong>
+              <span>مقارنة كاملة بين مدن الدراسة</span>
+            </a>
 
-    <!-- Floating WhatsApp button -->
-    <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
-        💬 WhatsApp <span>+39 393 632 3613</span>
-    </a>
+            <a href="cities.html" class="tab-link">
+              <strong>Milan</strong>
+              <span>مدينة المال والأعمال</span>
+            </a>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const buttons = document.querySelectorAll('.tab-button');
-        const panels = {
-          programs: document.getElementById('tab-programs'),
-          universities: document.getElementById('tab-universities'),
-          cities: document.getElementById('tab-cities')
-        };
-        buttons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const key = btn.dataset.tab;
-            Object.keys(panels).forEach(k => {
-              panels[k].classList.toggle('active', k === key);
-            });
+            <a href="cities.html" class="tab-link">
+              <strong>Rome</strong>
+              <span>العاصمة والتاريخ والثقافة</span>
+            </a>
+
+            <a href="cities.html" class="tab-link">
+              <strong>Bologna</strong>
+              <span>أكبر مدينة طلاب في أوروبا</span>
+            </a>
+
+            <a href="cities.html" class="tab-link">
+              <strong>Ancona</strong>
+              <span>مدينة ساحلية جميلة · UNIVPM</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>📞 WhatsApp: +39 393 632 3613 | 📸 Instagram: 
+      <a href="https://instagram.com/diboventures">@diboventures</a>
+    </p>
+    <p>© 2025 DiboVentures — All rights reserved.</p>
+  </footer>
+
+  <!-- Tabs Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.tab-button');
+      const panels = {
+        programs: document.getElementById('tab-programs'),
+        universities: document.getElementById('tab-universities'),
+        cities: document.getElementById('tab-cities')
+      };
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const key = btn.dataset.tab;
+          Object.keys(panels).forEach(k => {
+            panels[k].classList.toggle('active', k === key);
           });
         });
       });
-    </script>
+    });
+  </script>
 
 </body>
 </html>
