@@ -612,48 +612,89 @@ button:hover {
 .uni-links-row a {
   text-decoration: underline;
 }
-/* Internal links section */
-.internal-links-section {
+/* Internal tabs section on home */
+.internal-tabs {
   margin-top: 40px;
-  margin-bottom: 30px;
-  padding-top: 20px;
+  margin-bottom: 40px;
+  padding-top: 24px;
   border-top: 1px solid rgba(0,0,0,0.06);
 }
 
-.internal-links-title {
+.internal-tabs-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-.internal-links-grid {
+.tab-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  margin-bottom: 16px;
+}
+
+.tab-button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tab-button.active {
+  background: #0d47a1;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.tab-panels {
+  margin-top: 4px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
 }
 
-.internal-links-block h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.internal-links-block ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.internal-links-block li {
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
-.internal-links-block a {
+.tab-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #ffffff;
   text-decoration: none;
+  font-size: 13px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.tab-link strong {
+  font-size: 13px;
   color: #0d47a1;
 }
 
-.internal-links-block a:hover {
-  text-decoration: underline;
+.tab-link span {
+  font-size: 12px;
+  color: #444;
 }
 
+.tab-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  border-color: rgba(13,71,161,0.4);
+}
