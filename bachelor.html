@@ -5,8 +5,8 @@
   <title>Bachelor in Italy – DiboVentures</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Apply for a Bachelor (Laurea / Licenza) in Italy with DiboVentures. Full support for high school graduates, documents, language certificates, TOLC and visa.">
-  <meta name="keywords" content="bachelor in Italy, laurea, liceo, study in Italy, DiboVentures, Italian universities, TOLC, B2 Italian, B2 English, UNIVPM">
+  <meta name="description" content="Apply for a Bachelor degree in Italy with DiboVentures: requirements, steps, and application form for Arabic-speaking students.">
+  <meta name="keywords" content="Bachelor Italy, undergraduate Italy, study in Italy, DiboVentures, Italian universities, bachelor for Arabs">
   <link rel="canonical" href="https://diboventures.com/bachelor.html">
 
   <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
@@ -14,25 +14,106 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bachelor in Italy – DiboVentures">
-  <meta property="og:description" content="Bachelor and Licenza applications for studying in Italian universities with full support in Arabic and English.">
+  <meta property="og:description" content="Full support for Bachelor applications in Italy: universities, documents and scholarships.">
   <meta property="og:url" content="https://diboventures.com/bachelor.html">
   <meta property="og:image" content="https://diboventures.com/dv-logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bachelor in Italy – DiboVentures">
-  <meta name="twitter:description" content="Study a Bachelor in Italy with DiboVentures: documents, language certificates, TOLC exam and scholarship support.">
+  <meta name="twitter:description" content="Bachelor programs in Italy for international students with Arabic guidance.">
   <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3W6WCQNRC9');
-  </script>
+  <!-- Language tabs styling (نفس ستايل الصفحات التانية تقريبًا) -->
+  <style>
+    .lang-switch {
+      margin: 8px 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 999px;
+      background: #eef2ff;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    }
+    .lang-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #475569;
+      padding: 2px 6px;
+      border-right: 1px solid #cbd5f5;
+      margin-right: 4px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #1e293b;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .lang-btn span {
+      margin-left: 3px;
+      font-size: 11px;
+    }
+    .lang-btn.active {
+      background: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
+    }
+    .lang-section {
+      display: none;
+      font-size: 14px;
+      color: #374151;
+    }
+    .lang-section.active {
+      display: block;
+    }
+
+    .req-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 900px) {
+      .req-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    form label {
+      display: block;
+      font-size: 13px;
+      color: #111827;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      padding: 7px 9px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px 14px;
+    }
+  </style>
 </head>
 <body>
 
@@ -49,189 +130,223 @@
         </div>
       </div>
       <nav>
-        <nav>
-  <a href="index.html">Home</a>
-  <a href="bachelor.html">Bachelor</a>
-  <a href="master.html">Master</a>
-  <a href="scholarships.html">Scholarships</a>
-  <a href="universities.html">Universities</a>
-  <a href="cities.html">Cities</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="bachelor.html">Bachelor</a>
+        <a href="master.html">Master</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="universities.html">Universities</a>
+        <a href="cities.html">Cities</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="page-wrap">
 
-    <!-- محتوى البكالوريوس EN + AR -->
+    <!-- INTRO + LANG TABS -->
     <section class="card">
-      <div class="main-grid">
+      <h1>Bachelor in Italy 🇮🇹</h1>
 
-        <!-- English side -->
-        <div class="main-column">
-          <h1>Bachelor (Laurea) in Italy 🇮🇹</h1>
+      <div class="lang-switch">
+        <span class="lang-label">Languages</span>
+        <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
+        <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
+        <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
+        <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
+      </div>
+
+      <!-- EN -->
+      <div class="lang-section active" data-lang="en">
+        <p>
+          This page is for students who want to start a <strong>Bachelor degree in Italy</strong>.
+          We help you with university selection, documents and applications, step by step.
+        </p>
+        <p>
+          You can read the requirements below, and then fill in the application form.
+          After we receive your form, we will contact you on WhatsApp to complete the process.
+        </p>
+      </div>
+
+      <!-- AR -->
+      <div class="lang-section" data-lang="ar">
+        <section class="arabic-section">
           <p>
-            This page is for students who want to start a <strong>Bachelor degree in Italy</strong>
-            and need support with university admission, documents and scholarships.
+            الصفحة دي مخصصة للطلاب اللي حابين يبدأوا <strong>بكالوريوس في إيطاليا</strong>.
+            إحنا بنساعدك في اختيار الجامعات المناسبة، تجهيز الورق، والتقديم خطوة بخطوة.
           </p>
-
-          <h2>Who can apply?</h2>
-          <ul>
-            <li>Students who finished high school (Thanaweya Amma or equivalent).</li>
-            <li>Students in their last year of high school (conditional admission possible).</li>
-            <li>IGCSE / American Diploma students with at least 12 school years.</li>
-          </ul>
-
-          <h2>Required documents (Bachelor)</h2>
-          <ul>
-            <li>
-              High school certificate with grades – addressed to Italy 🇮🇹, legalized by the Ministry of Foreign Affairs and translated into Italian.
-            </li>
-            <li>
-              For students still in last year: a <strong>school enrollment certificate</strong> (شهادة قيد) can be used for conditional admission.
-            </li>
-            <li>
-              <strong>B2 language certificate</strong> in Italian or English (depending on the program).
-            </li>
-            <li>
-              TOLC online admission test (required for most majors, not all).
-            </li>
-            <li>Valid passport.</li>
-          </ul>
-
-          <h2>How DiboVentures helps you</h2>
-          <ul>
-            <li>Choosing the right universities and programs for your profile.</li>
-            <li>Preparing and submitting applications to several universities to increase your chance of acceptance.</li>
-            <li>Guidance for language certificates (Italian / English) and TOLC exam.</li>
-            <li>After acceptance, guidance for regional scholarships and visa process.</li>
-          </ul>
-
-          <p style="margin-top:10px;">
-            For quick questions, contact us on WhatsApp:
-            <strong><span class="ltr">+39 393 632 3613</span></strong>
+          <p>
+            تحت هتلاقي <strong>متطلبات التقديم</strong>، وبعدها فورم التقديم.
+            لما تملاه هنراجع بياناتك ونتواصل معاك على واتساب علشان نكمل باقي الخطوات.
           </p>
-        </div>
+        </section>
+      </div>
 
-        <!-- Arabic side -->
-        <div class="main-column">
-          <section class="arabic-section">
-            <h2>متطلبات وشروط التقديم على بكالوريوس / ليسانس 🇮🇹</h2>
+      <!-- IT -->
+      <div class="lang-section" data-lang="it">
+        <p>
+          Questa pagina è dedicata agli studenti che vogliono iniziare una
+          <strong>laurea triennale in Italia</strong>.
+          Ti aiutiamo nella scelta dell’università, nella preparazione dei documenti e nelle domande di ammissione.
+        </p>
+        <p>
+          Leggi i requisiti qui sotto e compila il modulo. Dopo aver ricevuto la tua richiesta,
+          ti contatteremo su WhatsApp per completare la procedura.
+        </p>
+      </div>
 
-            <p><strong>١) بيان نجاح ثانوية عامة (أو ما يعادلها):</strong></p>
-            <ul>
-              <li>بيان نجاح بالدرجات موجه لدولة إيطاليا 🇮🇹.</li>
-              <li>موثّق من الخارجية ومترجم للغة الإيطالية.</li>
-            </ul>
-
-            <p><strong>لو لسه في الصف الثالث الثانوي:</strong></p>
-            <ul>
-              <li>مطلوب <strong>شهادة قيد</strong> من المدرسة.</li>
-              <li>تقدر تاخد بيها قبول مشروط بتقديم شهادة الثانوية العامة بعد النتيجة.</li>
-            </ul>
-
-            <p><strong>٢) شهادة لغة:</strong></p>
-            <ul>
-              <li>شهادة لغة إيطالية أو إنجليزية مستوى <strong>B2</strong> على الأقل.</li>
-            </ul>
-
-            <p><strong>٣) اختبار قبول TOLC (أونلاين):</strong></p>
-            <ul>
-              <li>مطلوب في معظم التخصصات (مش كلها).</li>
-            </ul>
-
-            <p><strong>٤) خريجي IGCSE و American Diploma:</strong></p>
-            <ul>
-              <li>لازم يكون تم <strong>12 سنة دراسية</strong>.</li>
-              <li>أو يعمل سنة تحضيرية (Foundation) برسوم تقريبًا من <span class="ltr">3500</span> إلى <span class="ltr">5000€</span>.</li>
-            </ul>
-
-            <h3>إزاي بنساعدك في DiboVentures؟</h3>
-            <ul>
-              <li>نختار معاك التخصص والجامعة المناسبة حسب درجاتك وميزانيتك.</li>
-              <li>نقدّم لك على أكثر من جامعة لرفع نسبة القبول.</li>
-              <li>نرشدك لإزاي تجيب شهادة اللغة / أو إثبات إن دراستك السابقة كانت بالإنجليزي.</li>
-              <li>بعد القبول إن شاء الله، بنساعد في خطوة المنحة والفيزا.</li>
-            </ul>
-
-            <p style="margin-top:10px;">
-              للاستفسار أو بداية التقديم:
-              <br>واتساب: <strong><span class="ltr">+39 393 632 3613</span></strong>
-            </p>
-          </section>
-        </div>
-
+      <!-- TR -->
+      <div class="lang-section" data-lang="tr">
+        <p>
+          Bu sayfa, İtalya’da <strong>lisans eğitimi</strong> almak isteyen öğrenciler içindir.
+          Üniversite seçimi, belgeler ve başvuru sürecinde sana adım adım yardımcı oluyoruz.
+        </p>
+        <p>
+          Aşağıda başvuru şartlarını görebilir ve formu doldurabilirsin.
+          Form elimize ulaştıktan sonra, süreci tamamlamak için seninle WhatsApp üzerinden iletişime geçeceğiz.
+        </p>
       </div>
     </section>
 
-    <!-- Bachelor application form -->
+    <!-- REQUIREMENTS -->
     <section class="card">
-      <h2>Apply for a Bachelor in Italy</h2>
+      <h2>Requirements / المتطلبات الأساسية</h2>
+
+      <div class="req-grid">
+        <div>
+          <h3>For Bachelor applicants</h3>
+          <ul style="font-size:14px; color:#374151;">
+            <li>High school diploma (ثانوية عامة) with grades – translated into Italian and legalized.</li>
+            <li>If still in last year: شهادة قيد، ونقدر نطلع لك قبول مشروط لحين ظهور النتيجة.</li>
+            <li>Language certificate B2 in Italian or English (لو موجود، أو نناقشه معاك).</li>
+            <li>Preparing for, or planning, TOLC test (في بعض التخصصات فقط).</li>
+          </ul>
+
+          <h3 style="margin-top:10px;">Financial / Scholarship notes</h3>
+          <ul style="font-size:14px; color:#374151;">
+            <li>كشف حساب بنكي آخر ٦ شهور بقيمة تقريبية من 6000–7000 يورو أو ما يعادلها.</li>
+            <li>ممكن يكون باسم الأب أو الأم لو الطالب مقيم معاهم في نفس العنوان والقيد العائلي.</li>
+            <li>المنح تعتمد على الإقليم والجامعة، بنشرحها لك بعد القبول الجامعي.</li>
+          </ul>
+        </div>
+
+        <div class="arabic-section">
+          <h3>مراحل الخدمة والتكلفة</h3>
+          <p style="font-size:14px;">
+            ⬤ <strong>المرحلة الأولى – التقديم والقبول الجامعي</strong><br>
+            التكلفة الكاملة: <span class="ltr">350 €</span><br>
+            🔹 <strong>100 €</strong> عند بدء التقديم (على أكثر من جامعة).<br>
+            🔹 <strong>250 €</strong> بعد الحصول على القبول واستلام الإيميل والباسورد.
+          </p>
+          <p style="font-size:14px;">
+            ⬤ <strong>المرحلة الثانية – التقديم على المنحة</strong><br>
+            التكلفة الكاملة: <span class="ltr">350 €</span><br>
+            🔹 <strong>150 €</strong> قبل تقديم المنحة.<br>
+            🔹 <strong>200 €</strong> بعد الحصول على المنحة بإذن الله.
+          </p>
+          <p style="font-size:13px; color:#4b5563;">
+            الدفع متاح عن طريق PayPal أو خيارات تانية نتفق عليها سوا على واتساب.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="card">
+      <h2>Application form / فورم التقديم على البكالوريوس</h2>
       <p style="font-size:14px; color:#555;">
-        املا البيانات التالية، وإحنا هنرجع لك على واتساب أو الإيميل عشان نكمّل معاك كل التفاصيل الخاصة بالتقديم على الجامعات والمنحة.
+        من فضلك املا البيانات بدقة. هنتواصل معاك على واتساب بعد ما نستقبل الفورم لمتابعة كل التفاصيل.
       </p>
 
       <form action="https://formspree.io/f/mdkbwpgq" method="POST">
+        <!-- علشان نميز في الإيميل إن ده فورم البكالوريوس -->
         <input type="hidden" name="form-type" value="Bachelor">
 
+        <div class="form-row">
+          <div>
+            <label>Full name (الاسم بالكامل) *</label>
+            <input type="text" name="full-name" required>
+          </div>
+
+          <div>
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>WhatsApp number (مع كود الدولة) *</label>
+            <input type="text" name="whatsapp" placeholder="+20..., +966..., +39..." required>
+          </div>
+
+          <div>
+            <label>Country / الدولة *</label>
+            <input type="text" name="country" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>High school type (نوع الثانوية) *</label>
+            <select name="high-school-type" required>
+              <option value="">اختر...</option>
+              <option value="thanawya-amma">ثانوية عامة</option>
+              <option value="igcse">IGCSE</option>
+              <option value="american">American Diploma</option>
+              <option value="other">Other / أخرى</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Graduation year (سنة التخرج) *</label>
+            <input type="text" name="graduation-year" placeholder="مثال: 2023" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Grade / Percentage (المجموع) *</label>
+            <input type="text" name="grade" placeholder="مثال: 85%, جيد جدًا..." required>
+          </div>
+
+          <div>
+            <label>Language level (مستوى اللغة)</label>
+            <input type="text" name="language-level" placeholder="مثال: B1 Italian, B2 English, no certificate">
+          </div>
+        </div>
+
         <label>
-          Full name (الاسم بالكامل) *
-          <input type="text" name="name" required>
+          Preferred field of study (التخصص المرغوب) *
+          <input type="text" name="preferred-major" placeholder="هندسة، طب، IT، اقتصاد، إدارة أعمال..." required>
         </label>
 
         <label>
-          Email *
-          <input type="email" name="email" required>
+          Preferred cities or universities (إن وُجد)
+          <input type="text" name="preferred-cities-unis" placeholder="مثال: Milan, Bologna, UNIVPM, Sapienza...">
         </label>
 
         <label>
-          WhatsApp number *
-          <input type="text" name="whatsapp" required>
-        </label>
-
-        <label>
-          Nationality / الجنسية
-          <input type="text" name="nationality">
-        </label>
-
-        <label>
-          Current education / آخر شهادة دراسية
-          <input type="text" name="education" placeholder="مثال: ثانوية عامة 2024، IGCSE، American Diploma">
-        </label>
-
-        <label>
-          Language level / مستوى اللغة (إنجليزي أو إيطالي)
-          <input type="text" name="language_level" placeholder="مثال: B2 English, B1 Italian, أو لسه بدرس">
-        </label>
-
-        <label>
-          Preferred city or university (مدينة أو جامعة مفضلة)
-          <textarea name="preference" placeholder="لو حابب مدينة أو جامعة معيّنة، اكتب هنا (اختياري)"></textarea>
-        </label>
-
-        <label>
-          Extra details / أي ملاحظات إضافية
-          <textarea name="message"></textarea>
+          Extra info / أي تفاصيل إضافية تحب تشرحها
+          <textarea name="extra-info" placeholder="اكتب هنا ظروفك، وضعك المادي، أي أسئلة أو ملاحظات."></textarea>
         </label>
 
         <button class="btn-primary" type="submit">
-          Send application / إرسال طلب البكالوريوس
+          إرسال الطلب / Submit application
         </button>
       </form>
     </section>
 
   </main>
 
-  <!-- Floating WhatsApp -->
+  <!-- WhatsApp floating button -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
 
   <footer>
     <div class="footer-inner">
-      <div>© DiboVentures — All rights reserved. • Bachelor &amp; Study in Italy</div>
+      <div>© DiboVentures — Bachelor Applications for Italy</div>
       <div>
         <a href="index.html">Home</a>
         <a href="master.html">Master</a>
@@ -239,6 +354,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Language tabs script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.lang-btn');
+      const sections = document.querySelectorAll('.lang-section');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.dataset.lang;
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          sections.forEach(sec => {
+            sec.classList.toggle('active', sec.dataset.lang === lang);
+          });
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
