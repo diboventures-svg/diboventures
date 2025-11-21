@@ -80,11 +80,6 @@
         You pay <strong>150€</strong> before we submit the application,<br />
         then <strong>200€</strong> after the scholarship result is positive.
       </p>
-
-      <p class="contact-text">
-        To know if you qualify for a scholarship, contact us on WhatsApp:<br />
-        <strong>+39 393 632 3613</strong>
-      </p>
     </div>
 
     <!-- Arabic -->
@@ -123,13 +118,51 @@
         <li>بتدفع <strong>150 يورو</strong> قبل التقديم.</li>
         <li>وبعد الحصول على المنحة بإذن الله بتدفع <strong>200 يورو</strong> المتبقية.</li>
       </ul>
-
-      <p dir="rtl" class="arabic-footer">
-        لو شايف إن الشروط دي ممكن تكون متاحة عندك وعايز تعرف فرصتك في المنحة:<br />
-        ابعتلنا على الواتساب: <strong>+39 393 632 3613</strong><br />
-        أو استخدم نموذج المتابعة في صفحة الهوم وسِيب لنا تفاصيلك.
-      </p>
     </div>
+  </section>
+
+  <!-- SCHOLARSHIP FORM SECTION -->
+  <section class="container card" style="margin-top: 30px; max-width: 900px;">
+    <h2>Check Your Scholarship Eligibility</h2>
+    <p>Tell us a bit about your situation and we will check your chances for a scholarship in Italy.</p>
+
+    <form class="lead-form" action="https://formspree.io/f/mdkbwpgq" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name_sch">Full Name</label>
+          <input type="text" id="name_sch" name="name" required placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label for="email_sch">Email</label>
+          <input type="email" id="email_sch" name="email" required placeholder="your@email.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="whatsapp_sch">WhatsApp Number</label>
+          <input type="text" id="whatsapp_sch" name="whatsapp" required placeholder="+39 393 632 3613" />
+        </div>
+        <div class="form-group">
+          <label for="status_sch">Current situation</label>
+          <select id="status_sch" name="status" required>
+            <option value="">Select…</option>
+            <option value="High school student">High school student</option>
+            <option value="Bachelor student">Bachelor student</option>
+            <option value="Bachelor graduate">Bachelor graduate</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message_sch">Financial & family situation</label>
+        <textarea id="message_sch" name="message" rows="3" placeholder="Example: parents’ job, approximate monthly income, if you have bank statement…"></textarea>
+      </div>
+
+      <button type="submit" class="primary-btn">Send Scholarship Request</button>
+      <p style="font-size:12px;margin-top:6px;">You can also contact us directly on WhatsApp: +39 393 632 3613</p>
+    </form>
   </section>
 </main>
 
