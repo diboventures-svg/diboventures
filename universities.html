@@ -1,484 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Universities in Italy – DiboVentures</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="List of major universities in Italy with city, type and advantages. DiboVentures helps you choose the right university for your study path." />
-  <link rel="icon" type="image/jpeg" href="banner.jpg" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Italian Universities – DiboVentures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="List of top universities in Italy for Bachelor and Master students: locations, notes and guidance with DiboVentures.">
+  <meta name="keywords" content="Italian universities, universities in Italy, Politecnico di Milano, University of Bologna, Sapienza, UNIVPM, DiboVentures, study in Italy">
+  <link rel="canonical" href="https://diboventures.com/universities.html">
+
+  <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
+  <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Italian Universities – DiboVentures">
+  <meta property="og:description" content="Discover important universities in Italy and get guidance from DiboVentures for your application.">
+  <meta property="og:url" content="https://diboventures.com/universities.html">
+  <meta property="og:image" content="https://diboventures.com/dv-logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Italian Universities – DiboVentures">
+  <meta name="twitter:description" content="Overview of top Italian universities with notes about each city and faculty options.">
+  <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3W6WCQNRC9');
+  </script>
 </head>
-
 <body>
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-mark">DV</div>
-      <div class="logo-text">
-        <div class="logo-main">
-          <span class="dibo">DIBO</span><span class="ventures">VENTURES</span>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="dv-logo.png" alt="DiboVentures logo" class="logo-mark">
+        <div class="logo-text">
+          <div class="logo-main">
+            <span class="dibo">DIBO</span><span class="ventures">VENTURES</span>
+          </div>
+          <div class="logo-sub">Study &amp; Travel • Italy 🇮🇹</div>
         </div>
-        <div class="logo-sub">Study &amp; Travel · Italy 🇮🇹</div>
       </div>
-    </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="bachelor.html">Bachelor</a>
+        <a href="master.html">Master</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="universities.html">Universities</a>
+        <a href="cities.html">Cities</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="bachelor.html">Bachelor</a>
-      <a href="master.html">Master</a>
-      <a href="scholarships.html">Scholarships</a>
-      <a href="universities.html" class="active">Universities</a>
-      <a href="cities.html">Cities</a>
-    </nav>
-  </div>
-</header>
+  <main class="page-wrap">
 
-<main>
-  <section class="uni-page">
-    <div class="uni-header">
-      <h1>Universities in Italy 🇮🇹</h1>
-      <p>
-        Here is a list of major public and well-known universities in Italy.
-        You can search by name or filter by city. For a personalized plan, contact DiboVentures and we will tell you which universities fit your case.
+    <section class="card">
+      <h1>Top Universities in Italy 🇮🇹</h1>
+      <p style="font-size:14px; color:#555;">
+        هنا تقدر تشوف قائمة بأهم الجامعات في إيطاليا لمرحلة <strong>البكالوريوس</strong> و<strong>الماجستير</strong>،
+        مع المدينة ونبذة سريعة عن كل جامعة. القائمة دي للتعريف فقط – اختيار الجامعة المناسبة ليك بيكون حسب درجتك، تخصصك، وميزانيتك،
+        وده اللي بنساعدك فيه في DiboVentures.
       </p>
-    </div>
+      <p style="font-size:14px; color:#555;">
+        لو عايز نرشح لك أفضل 3–5 جامعات تناسب حالتك، ابعتلنا على واتساب:
+        <strong><span class="ltr">+39 393 632 3613</span></strong>
+      </p>
+    </section>
 
-    <!-- Filters -->
-    <div class="uni-filters">
-      <input id="uni-search" type="text" placeholder="Search university name..." />
-      <select id="uni-city">
-        <option value="">All cities</option>
-        <option value="Milan">Milan</option>
-        <option value="Rome">Rome</option>
-        <option value="Turin">Turin</option>
-        <option value="Bologna">Bologna</option>
-        <option value="Padua">Padua</option>
-        <option value="Florence">Florence</option>
-        <option value="Pisa">Pisa</option>
-        <option value="Siena">Siena</option>
-        <option value="Trento">Trento</option>
-        <option value="Pavia">Pavia</option>
-        <option value="Naples">Naples</option>
-        <option value="Bari">Bari</option>
-        <option value="Ancona">Ancona</option>
-        <option value="Bergamo">Bergamo</option>
-        <option value="Verona">Verona</option>
-        <option value="Parma">Parma</option>
-        <option value="Venice">Venice</option>
-        <option value="Genoa">Genoa</option>
-        <option value="Perugia">Perugia</option>
-        <option value="Catania">Catania</option>
-        <option value="Palermo">Palermo</option>
-        <option value="Messina">Messina</option>
-        <option value="Salerno">Salerno</option>
-        <option value="Calabria">Calabria</option>
-        <option value="Cagliari">Cagliari</option>
-        <option value="Modena">Modena</option>
-        <option value="Ferrara">Ferrara</option>
-        <option value="Udine">Udine</option>
-        <option value="Trieste">Trieste</option>
-        <option value="Camerino">Camerino</option>
-        <option value="Brescia">Brescia</option>
-        <option value="Foggia">Foggia</option>
-        <option value="Cassino">Cassino</option>
-      </select>
-    </div>
+    <section class="card">
+      <h2>Universities list / قائمة الجامعات</h2>
 
-    <!-- Universities grid -->
-    <div id="uni-list" class="uni-grid"></div>
-  </section>
-</main>
+      <div class="list-grid">
 
-<a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
-  💬 WhatsApp <span>Chat with us</span>
-</a>
+        <!-- 1 -->
+        <div class="list-item">
+          <div class="badge">Milan</div>
+          <h3>Politecnico di Milano</h3>
+          <p>من أقوى جامعات أوروبا في الهندسة، التكنولوجيا، والـ Design. منافسة قوية وبرامج إنجليزي كثيرة.</p>
+        </div>
 
-<footer>
-  <p>© DiboVentures — All rights reserved.</p>
-  <p>Study in Italy · Student Services</p>
-</footer>
+        <!-- 2 -->
+        <div class="list-item">
+          <div class="badge">Milan</div>
+          <h3>Università degli Studi di Milano (Statale)</h3>
+          <p>جامعة حكومية كبيرة في ميلانو، قوية في الطب، العلوم، القانون والعلوم الإنسانية.</p>
+        </div>
 
-<script>
-  const universities = [
-    // MILAN
-    {
-      name: "Politecnico di Milano",
-      city: "Milan",
-      type: "Engineering & Design",
-      advantages: "Top technical university; very strong in engineering, architecture and design.",
-      url: "https://www.polimi.it/"
-    },
-    {
-      name: "University of Milan",
-      city: "Milan",
-      type: "General",
-      advantages: "Large public university; strong in medicine, law, economics and humanities.",
-      url: "https://www.unimi.it/en"
-    },
-    {
-      name: "Bocconi University",
-      city: "Milan",
-      type: "Business (Private)",
-      advantages: "Highly ranked for business, economics and finance.",
-      url: "https://www.unibocconi.eu/"
-    },
+        <!-- 3 -->
+        <div class="list-item">
+          <div class="badge">Rome</div>
+          <h3>Sapienza University of Rome</h3>
+          <p>واحدة من أكبر وأقدم الجامعات في أوروبا، فيها تخصصات كتير في كل المجالات تقريبًا.</p>
+        </div>
 
-    // ROME
-    {
-      name: "Sapienza University of Rome",
-      city: "Rome",
-      type: "General",
-      advantages: "One of the largest universities in Europe; many programs in English.",
-      url: "https://www.uniroma1.it/en"
-    },
-    {
-      name: "Tor Vergata University of Rome",
-      city: "Rome",
-      type: "Economics & Engineering",
-      advantages: "Popular for business, economics and engineering.",
-      url: "https://web.uniroma2.it/home"
-    },
-    {
-      name: "Roma Tre University",
-      city: "Rome",
-      type: "General",
-      advantages: "Young dynamic university; strong in social sciences and humanities.",
-      url: "https://www.uniroma3.it/en/"
-    },
+        <!-- 4 -->
+        <div class="list-item">
+          <div class="badge">Rome</div>
+          <h3>Tor Vergata University of Rome</h3>
+          <p>جامعة حديثة نسبيًا في روما، فيها برامج إنجليزي ممتازة في الاقتصاد والإدارة وغيرها.</p>
+        </div>
 
-    // BOLOGNA
-    {
-      name: "University of Bologna",
-      city: "Bologna",
-      type: "General",
-      advantages: "One of the oldest universities in the world; huge student city.",
-      url: "https://www.unibo.it/en"
-    },
+        <!-- 5 -->
+        <div class="list-item">
+          <div class="badge">Bologna</div>
+          <h3>University of Bologna</h3>
+          <p>أقدم جامعة في العالم، مدينة طلاب من الدرجة الأولى، ممتازة للي يدور على أجواء طلابية.</p>
+        </div>
 
-    // PADUA
-    {
-      name: "University of Padua",
-      city: "Padua",
-      type: "General",
-      advantages: "Historic university; strong in medicine, science and engineering.",
-      url: "https://www.unipd.it/en/"
-    },
+        <!-- 6 -->
+        <div class="list-item">
+          <div class="badge">Turin</div>
+          <h3>Politecnico di Torino</h3>
+          <p>جامعة قوية جدًا في الهندسة وخاصة الميكانيكا، السيارات، والاتصالات.</p>
+        </div>
 
-    // FLORENCE
-    {
-      name: "University of Florence",
-      city: "Florence",
-      type: "General",
-      advantages: "Good for arts, architecture, humanities and social sciences.",
-      url: "https://www.unifi.it/changelang-eng.html"
-    },
+        <!-- 7 -->
+        <div class="list-item">
+          <div class="badge">Turin</div>
+          <h3>Università degli Studi di Torino</h3>
+          <p>جامعة حكومية كبيرة في تورينو، فيها تخصصات متنوعة من القانون إلى الاقتصاد والعلوم.</p>
+        </div>
 
-    // PISA
-    {
-      name: "University of Pisa",
-      city: "Pisa",
-      type: "General",
-      advantages: "Known for science, engineering and mathematics.",
-      url: "https://www.unipi.it/index.php/english"
-    },
-    {
-      name: "Scuola Normale Superiore di Pisa",
-      city: "Pisa",
-      type: "Elite school",
-      advantages: "Highly selective; strong in mathematics, physics and humanities.",
-      url: "https://www.sns.it/en"
-    },
-    {
-      name: "Sant’Anna School of Advanced Studies",
-      city: "Pisa",
-      type: "Elite school",
-      advantages: "Focused on advanced studies in engineering, economics and political sciences.",
-      url: "https://www.santannapisa.it/en"
-    },
+        <!-- 8 -->
+        <div class="list-item">
+          <div class="badge">Ancona</div>
+          <h3>UNIVPM – Università Politecnica delle Marche</h3>
+          <p>جامعة في مدينة ساحلية هادئة (أنكونا)، مناسبة لطلبة كتير من الوطن العربي، تكاليف معيشة معقولة.</p>
+        </div>
 
-    // SIENA
-    {
-      name: "University of Siena",
-      city: "Siena",
-      type: "General",
-      advantages: "Historic university; calm student city, good for economics and humanities.",
-      url: "https://en.unisi.it/"
-    },
+        <!-- 9 -->
+        <div class="list-item">
+          <div class="badge">Florence</div>
+          <h3>University of Florence</h3>
+          <p>جامعة عريقة في مدينة فلورنسا الجميلة، ممتازة للفنون، الهندسة، والعلوم الإنسانية.</p>
+        </div>
 
-    // TRENTO
-    {
-      name: "University of Trento",
-      city: "Trento",
-      type: "General",
-      advantages: "Well ranked for research; good quality of life and nature around.",
-      url: "https://www.unitn.it/en"
-    },
+        <!-- 10 -->
+        <div class="list-item">
+          <div class="badge">Pisa</div>
+          <h3>University of Pisa</h3>
+          <p>معروفة بقوة في العلوم، الهندسة، والرياضيات، بالقرب من برج بيزا الشهير.</p>
+        </div>
 
-    // PAVIA
-    {
-      name: "University of Pavia",
-      city: "Pavia",
-      type: "General",
-      advantages: "College system; strong in medicine and engineering.",
-      url: "https://web.unipv.it/en/"
-    },
+        <!-- 11 -->
+        <div class="list-item">
+          <div class="badge">Padua</div>
+          <h3>University of Padua</h3>
+          <p>جامعة تاريخية قوية خاصة في الطب والبحث العلمي، قريبة من فينيسيا.</p>
+        </div>
 
-    // NAPLES
-    {
-      name: "University of Naples Federico II",
-      city: "Naples",
-      type: "General",
-      advantages: "One of the oldest public universities; many technical and scientific programs.",
-      url: "https://www.unina.it/en_GB/home"
-    },
+        <!-- 12 -->
+        <div class="list-item">
+          <div class="badge">Venice</div>
+          <h3>Ca’ Foscari University of Venice</h3>
+          <p>جامعة في مدينة فينيسيا، متميزة في الاقتصاد، اللغات، والعلاقات الدولية.</p>
+        </div>
 
-    // BARI
-    {
-      name: "University of Bari Aldo Moro",
-      city: "Bari",
-      type: "General",
-      advantages: "Located in the south; good for medicine, law and humanities.",
-      url: "https://www.uniba.it/en"
-    },
+        <!-- 13 -->
+        <div class="list-item">
+          <div class="badge">Trento</div>
+          <h3>University of Trento</h3>
+          <p>جامعة صغيرة لكن مرتبتها عالية في التصنيفات، ممتازة في الهندسة وعلوم الكمبيوتر.</p>
+        </div>
 
-    // TURIN
-    {
-      name: "University of Turin",
-      city: "Turin",
-      type: "General",
-      advantages: "Strong in economics, law, languages and social sciences.",
-      url: "https://en.unito.it/"
-    },
-    {
-      name: "Polytechnic University of Turin",
-      city: "Turin",
-      type: "Engineering",
-      advantages: "Focused on engineering, architecture and technology.",
-      url: "https://www.polito.it/en"
-    },
+        <!-- 14 -->
+        <div class="list-item">
+          <div class="badge">Bolzano</div>
+          <h3>Free University of Bozen-Bolzano</h3>
+          <p>جامعة ثلاثية اللغة (إيطالي، ألماني، إنجليزي)، قوية في الاقتصاد، التعليم، والـ IT.</p>
+        </div>
 
-    // ANCONA (UNIVPM)
-    {
-      name: "Università Politecnica delle Marche (UNIVPM)",
-      city: "Ancona",
-      type: "Engineering & Sciences",
-      advantages: "Strong in engineering, agriculture and marine-related programs; located in a coastal city.",
-      url: "https://www.univpm.it/"
-    },
+        <!-- 15 -->
+        <div class="list-item">
+          <div class="badge">Naples</div>
+          <h3>University of Naples Federico II</h3>
+          <p>من أقدم الجامعات في العالم، مدينة كبيرة ومليانة حياة لكن تكاليفها معقولة.</p>
+        </div>
 
-    // BERGAMO
-    {
-      name: "University of Bergamo",
-      city: "Bergamo",
-      type: "General",
-      advantages: "Medium-size city; good for economics, engineering and humanities.",
-      url: "https://en.unibg.it/"
-    },
+        <!-- 16 -->
+        <div class="list-item">
+          <div class="badge">Parma</div>
+          <h3>University of Parma</h3>
+          <p>مدينة متوسطة وهادئة، جامعة كويسة في التخصصات الصحية والهندسية.</p>
+        </div>
 
-    // VERONA
-    {
-      name: "University of Verona",
-      city: "Verona",
-      type: "General",
-      advantages: "Beautiful city; strong in economics, languages and health sciences.",
-      url: "https://www.univr.it/en"
-    },
+        <!-- 17 -->
+        <div class="list-item">
+          <div class="badge">Genoa</div>
+          <h3>University of Genoa</h3>
+          <p>مدينة ساحلية كبيرة على البحر، الجامعة قوية في الهندسة البحرية والكمبيوتر.</p>
+        </div>
 
-    // PARMA
-    {
-      name: "University of Parma",
-      city: "Parma",
-      type: "General",
-      advantages: "Known for food science, agriculture and engineering; calm student life.",
-      url: "https://en.unipr.it/"
-    },
+        <!-- 18 -->
+        <div class="list-item">
+          <div class="badge">Perugia</div>
+          <h3>University of Perugia</h3>
+          <p>مدينة طلابية هادئة في وسط إيطاليا، مناسبة للي يحب الهدوء.</p>
+        </div>
 
-    // VENICE
-    {
-      name: "Ca’ Foscari University of Venice",
-      city: "Venice",
-      type: "Economics & Humanities",
-      advantages: "Famous for economics, languages and cultural studies in a unique city.",
-      url: "https://www.unive.it/pag/13526/"
-    },
+        <!-- 19 -->
+        <div class="list-item">
+          <div class="badge">Siena</div>
+          <h3>University of Siena</h3>
+          <p>مدينة تاريخية جميلة في توسكانا، الجامعة مميزة خاصة في الاقتصاد والعلوم الإنسانية.</p>
+        </div>
 
-    // GENOA
-    {
-      name: "University of Genoa",
-      city: "Genoa",
-      type: "General",
-      advantages: "Port city; strong in engineering and maritime-related fields.",
-      url: "https://unige.it/en"
-    },
+        <!-- 20 -->
+        <div class="list-item">
+          <div class="badge">Bari</div>
+          <h3>University of Bari Aldo Moro</h3>
+          <p>مدينة جنوبية على البحر الأدرياتي، تكاليف المعيشة أقل من الشمال عادة.</p>
+        </div>
 
-    // PERUGIA
-    {
-      name: "University of Perugia",
-      city: "Perugia",
-      type: "General",
-      advantages: "Historic university town; popular with international students.",
-      url: "https://www.unipg.it/en/"
-    },
-
-    // CATANIA
-    {
-      name: "University of Catania",
-      city: "Catania",
-      type: "General",
-      advantages: "Located in Sicily; offers a wide range of programs with lower cost of living.",
-      url: "https://www.unict.it/en"
-    },
-
-    // PALERMO
-    {
-      name: "University of Palermo",
-      city: "Palermo",
-      type: "General",
-      advantages: "Large university in Sicily; good for economics, law and humanities.",
-      url: "https://www.unipa.it/"
-    },
-
-    // MESSINA
-    {
-      name: "University of Messina",
-      city: "Messina",
-      type: "General",
-      advantages: "Coastal city; offers medicine, engineering and humanities.",
-      url: "https://www.unime.it/en"
-    },
-
-    // SALERNO
-    {
-      name: "University of Salerno",
-      city: "Salerno",
-      type: "General",
-      advantages: "Modern campus; strong in engineering and economics.",
-      url: "https://web.unisa.it/en"
-    },
-
-    // CALABRIA
-    {
-      name: "University of Calabria",
-      city: "Calabria",
-      type: "General",
-      advantages: "Campus-style university; good for engineering and sciences.",
-      url: "https://www.unical.it/portale/en/"
-    },
-
-    // CAGLIARI
-    {
-      name: "University of Cagliari",
-      city: "Cagliari",
-      type: "General",
-      advantages: "Located in Sardinia; interesting option for students who like islands and nature.",
-      url: "https://unica.it/unica/en/homepage.page"
-    },
-
-    // MODENA
-    {
-      name: "University of Modena and Reggio Emilia",
-      city: "Modena",
-      type: "General",
-      advantages: "Strong in engineering, life sciences and economics.",
-      url: "https://www.unimore.it/"
-    },
-
-    // FERRARA
-    {
-      name: "University of Ferrara",
-      city: "Ferrara",
-      type: "General",
-      advantages: "Medium-size city; good for architecture, law and sciences.",
-      url: "https://www.unife.it/en"
-    },
-
-    // UDINE
-    {
-      name: "University of Udine",
-      city: "Udine",
-      type: "General",
-      advantages: "Northern city; good quality of life and engineering/science programs.",
-      url: "https://www.uniud.it/en"
-    },
-
-    // TRIESTE
-    {
-      name: "University of Trieste",
-      city: "Trieste",
-      type: "General",
-      advantages: "Port city with strong research centers; good for sciences.",
-      url: "https://www.units.it/en"
-    },
-
-    // CAMERINO
-    {
-      name: "University of Camerino",
-      city: "Camerino",
-      type: "General",
-      advantages: "Small university town; strong in sciences and architecture.",
-      url: "https://www.unicam.it/"
-    },
-
-    // BRESCIA
-    {
-      name: "University of Brescia",
-      city: "Brescia",
-      type: "General",
-      advantages: "Located in Lombardy; good for engineering and health sciences.",
-      url: "https://www.unibs.it/en"
-    },
-
-    // FOGGIA
-    {
-      name: "University of Foggia",
-      city: "Foggia",
-      type: "General",
-      advantages: "Southern Italy; offers agriculture, economics, humanities and health.",
-      url: "https://www.unifg.it/en"
-    },
-
-    // CASSINO
-    {
-      name: "University of Cassino and Southern Lazio",
-      city: "Cassino",
-      type: "General",
-      advantages: "Smaller university; good for engineering and economics in a quiet town.",
-      url: "https://www.unicas.it/"
-    }
-  ];
-
-  const uniListEl = document.getElementById("uni-list");
-  const searchEl = document.getElementById("uni-search");
-  const cityEl = document.getElementById("uni-city");
-
-  function renderUniversities() {
-    const term = searchEl.value.toLowerCase();
-    const city = cityEl.value;
-
-    const filtered = universities.filter(u =>
-      u.name.toLowerCase().includes(term) &&
-      (city ? u.city === city : true)
-    );
-
-    if (!filtered.length) {
-      uniListEl.innerHTML = "<p style='font-size:13px;'>No universities match your search. Try another name or city.</p>";
-      return;
-    }
-
-    uniListEl.innerHTML = filtered.map(u => `
-      <div class="uni-card">
-        <h3>${u.name}</h3>
-        <div class="uni-meta">${u.city} · ${u.type}</div>
-        <p>${u.advantages}</p>
-        <p class="uni-link"><a href="${u.url}" target="_blank" rel="noopener">Official website</a></p>
       </div>
-    `).join("");
-  }
+    </section>
 
-  searchEl.addEventListener("input", renderUniversities);
-  cityEl.addEventListener("change", renderUniversities);
-  renderUniversities();
-</script>
+    <!-- Small note & contact -->
+    <section class="card">
+      <h2>Which universities are best for you?</h2>
+      <p style="font-size:14px; color:#555;">
+        اختيار الجامعة الأنسب مش بس على اسم الجامعة، لكن كمان على:
+      </p>
+      <ul style="font-size:14px; color:#444;">
+        <li>درجة الثانوية / البكالوريوس.</li>
+        <li>الميزانية المتاحة للمعيشة أول سنة.</li>
+        <li>لغة الدراسة (إنجليزي / إيطالي).</li>
+        <li>نوع التخصص اللي نفسك تدرسه.</li>
+      </ul>
+      <p style="font-size:14px; color:#555;">
+        عشان كده بنفضّل دايمًا يكون فيه استشارة شخصية، نسمع وضعك بالكامل ونرشح لك أنسب 3–5 جامعات.
+        تقدر تبعتلنا على واتساب ونرتب مكالمة:
+      </p>
+      <p>
+        WhatsApp:
+        <strong><span class="ltr">+39 393 632 3613</span></strong>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
+    💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
+  </a>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© DiboVentures — All rights reserved. • Italian Universities &amp; Study Guidance</div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="bachelor.html">Bachelor</a>
+        <a href="master.html">Master</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
