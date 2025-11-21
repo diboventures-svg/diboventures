@@ -355,4 +355,28 @@
     })();
   </script>
 </body>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.tab-button');
+    const panels = {
+      programs: document.getElementById('tab-programs'),
+      universities: document.getElementById('tab-universities'),
+      cities: document.getElementById('tab-cities')
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // active button
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // active panel
+        const key = btn.dataset.tab;
+        Object.keys(panels).forEach(k => {
+          panels[k].classList.toggle('active', k === key);
+        });
+      });
+    });
+  });
+</script>
 </html>
