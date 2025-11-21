@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://diboventures.com/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://diboventures.com/bachelor.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://diboventures.com/master.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://diboventures.com/scholarships.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://diboventures.com/universities.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://diboventures.com/cities.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+
+  <!-- Universities Pages (40 page) -->
+  <url><loc>https://diboventures.com/universities/unive-milan.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unive-padova.html</loc></url>
+  <url><loc>https://diboventures.com/universities/univpm.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unibo.html</loc></url>
+  <url><loc>https://diboventures.com/universities/polimi.html</loc></url>
+  <url><loc>https://diboventures.com/universities/politecnico-torino.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unipi.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unife.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unimib.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unisr.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unict.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unica.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unige.html</loc></url>
+  <url><loc>https://diboventures.com/universities/univr.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unisi.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unive-venezia.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unisalento.html</loc></url>
+  <url><loc>https://diboventures.com/universities/unimc.html</loc></url>
+  <url><loc>https://diboventures.com/universities/parthenope.html</loc></url>
+
+  <!-- Cities Pages (20 page) -->
+  <url><loc>https://diboventures.com/cities/milan.html</loc></url>
+  <url><loc>https://diboventures.com/cities/rome.html</loc></url>
+  <url><loc>https://diboventures.com/cities/florence.html</loc></url>
+  <url><loc>https://diboventures.com/cities/pisa.html</loc></url>
+  <url><loc>https://diboventures.com/cities/naples.html</loc></url>
+  <url><loc>https://diboventures.com/cities/palermo.html</loc></url>
+  <url><loc>https://diboventures.com/cities/bari.html</loc></url>
+  <url><loc>https://diboventures.com/cities/genoac.html</loc></url>
+  <url><loc>https://diboventures.com/cities/venice.html</loc></url>
+  <url><loc>https://diboventures.com/cities/parma.html</loc></url>
+  <url><loc>https://diboventures.com/cities/ancona.html</loc></url>
+  <url><loc>https://diboventures.com/cities/bergamo.html</loc></url>
+  <url><loc>https://diboventures.com/cities/modena.html</loc></url>
+
+</urlset>
