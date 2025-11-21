@@ -24,6 +24,101 @@
   <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Language switch + card enhancements (خاص بالصفحة دي) -->
+  <style>
+    .lang-switch {
+      margin: 8px 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 999px;
+      background: #eef2ff;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    }
+    .lang-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #475569;
+      padding: 2px 6px;
+      border-right: 1px solid #cbd5f5;
+      margin-right: 4px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #1e293b;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .lang-btn span {
+      margin-left: 3px;
+      font-size: 11px;
+    }
+    .lang-btn.active {
+      background: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
+    }
+    .lang-section {
+      display: none;
+      font-size: 14px;
+      color: #374151;
+    }
+    .lang-section.active {
+      display: block;
+    }
+
+    /* تحسين شكل كروت الجامعات */
+    .list-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 45%);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .list-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+    .list-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+      border-color: rgba(37, 99, 235, 0.7);
+    }
+    .list-item:hover::before {
+      opacity: 1;
+    }
+    .list-item h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+    }
+    .list-item h3::after {
+      content: "🎓";
+      font-size: 15px;
+      opacity: 0.8;
+    }
+    .list-item p {
+      margin: 3px 0;
+    }
+    .list-item a {
+      color: #1d4ed8;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
 
@@ -54,19 +149,93 @@
 
   <main class="page-wrap">
 
+    <!-- INTRO + LANGUAGE TABS -->
     <section class="card">
       <h1>Top Universities in Italy 🇮🇹</h1>
-      <p style="font-size:14px; color:#555;">
-        هنا تقدر تشوف قائمة بأهم الجامعات في إيطاليا لمرحلة <strong>البكالوريوس</strong> و<strong>الماجستير</strong>،
-        مع المدينة ونبذة سريعة عن كل جامعة، وكمان لينك مباشر للموقع الرسمي.  
-        اختيار الجامعة المناسبة ليك بيكون حسب درجتك، تخصصك، وميزانيتك – وده اللي بنساعدك فيه في DiboVentures.
-      </p>
-      <p style="font-size:14px; color:#555;">
-        لو عايز نرشح لك أفضل 3–5 جامعات تناسب حالتك، ابعتلنا على واتساب:
-        <strong><span class="ltr">+39 393 632 3613</span></strong>
-      </p>
+
+      <div class="lang-switch">
+        <span class="lang-label">Languages</span>
+        <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
+        <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
+        <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
+        <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
+      </div>
+
+      <!-- English -->
+      <div class="lang-section active" data-lang="en">
+        <p>
+          Here you can see a list of the most important universities in Italy for
+          <strong>Bachelor</strong> and <strong>Master</strong> students, with the city and a short note about each one,
+          plus a direct link to the official website.
+        </p>
+        <p>
+          The “best” university for you depends on your grades, field of study, budget and language (Italian/English).
+          This is what we help you decide at <strong>DiboVentures</strong>.
+        </p>
+        <p style="font-size:14px;">
+          If you want us to suggest the best 3–5 universities for your case, send us a message on WhatsApp:
+          <strong><span class="ltr">+39 393 632 3613</span></strong>
+        </p>
+      </div>
+
+      <!-- Arabic -->
+      <div class="lang-section" data-lang="ar">
+        <section class="arabic-section">
+          <p>
+            هنا تقدر تشوف قائمة بأهم الجامعات في إيطاليا لمرحلة <strong>البكالوريوس</strong> و<strong>الماجستير</strong>،
+            مع المدينة ونبذة سريعة عن كل جامعة، وكمان لينك مباشر للموقع الرسمي.
+          </p>
+          <p>
+            أفضل جامعة ليك مش بالاسم بس، لكن حسب:
+            <strong>درجاتك، التخصص اللي حابه، ميزانيتك، ولغة الدراسة (إيطالي أو إنجليزي)</strong>،
+            وده تحديدًا اللي بنساعدك فيه في <strong>DiboVentures</strong>.
+          </p>
+          <p>
+            لو حابب نرشح لك أفضل من ٣ إلى ٥ جامعات تناسب وضعك:
+            تواصل معنا على واتساب
+            <strong><span class="ltr">+39 393 632 3613</span></strong>
+          </p>
+        </section>
+      </div>
+
+      <!-- Italian -->
+      <div class="lang-section" data-lang="it">
+        <p>
+          Qui puoi trovare un elenco delle principali università italiane per
+          <strong>laurea triennale</strong> e <strong>laurea magistrale</strong>, con la città,
+          una breve descrizione e il link al sito ufficiale.
+        </p>
+        <p>
+          L’università “migliore” per te dipende dai tuoi voti, dal corso di studi che desideri,
+          dal budget e dalla lingua di studio (italiano / inglese).
+          Con <strong>DiboVentures</strong> ti aiutiamo a scegliere le opzioni più adatte al tuo profilo.
+        </p>
+        <p style="font-size:14px;">
+          Se vuoi ricevere una lista personalizzata di 3–5 università adatte a te,
+          scrivici su WhatsApp:
+          <strong><span class="ltr">+39 393 632 3613</span></strong>
+        </p>
+      </div>
+
+      <!-- Turkish -->
+      <div class="lang-section" data-lang="tr">
+        <p>
+          Burada İtalya’da <strong>lisans</strong> ve <strong>yüksek lisans</strong> için
+          en önemli üniversitelerin bir listesini, şehirleri ve her üniversite hakkında kısa bir notla birlikte
+          resmi web sitesi linkiyle görebilirsin.
+        </p>
+        <p>
+          Senin için “en iyi” üniversite; notlarına, okumak istediğin bölüme, bütçene ve eğitim diline
+          (İtalyanca / İngilizce) göre değişir. <strong>DiboVentures</strong> olarak bu seçimi yapmana yardımcı oluyoruz.
+        </p>
+        <p style="font-size:14px;">
+          Durumuna uygun 3–5 üniversite önerisi almak istersen, WhatsApp üzerinden bize yaz:
+          <strong><span class="ltr">+39 393 632 3613</span></strong>
+        </p>
+      </div>
     </section>
 
+    <!-- UNIVERSITIES LIST -->
     <section class="card">
       <h2>Universities list / قائمة الجامعات</h2>
 
@@ -314,6 +483,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Language switch script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.lang-btn');
+      const sections = document.querySelectorAll('.lang-section');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.dataset.lang;
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          sections.forEach(sec => {
+            sec.classList.toggle('active', sec.dataset.lang === lang);
+          });
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
