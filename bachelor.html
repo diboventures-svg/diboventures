@@ -77,11 +77,6 @@
       <p>
         For scholarship support, please see the <a href="scholarships.html">Scholarships page</a>.
       </p>
-
-      <p class="contact-text">
-        Ready to start your Bachelor plan?<br />
-        WhatsApp: <strong>+39 393 632 3613</strong>
-      </p>
     </div>
 
     <!-- Arabic side -->
@@ -112,13 +107,51 @@
         <li>بتدفع <strong>100 يورو</strong> في البداية للتقديم على أكثر من جامعة.</li>
         <li>وفي حالة القبول بإذن الله بتدفع <strong>250 يورو</strong> الباقيين.</li>
       </ul>
-
-      <p dir="rtl" class="arabic-footer">
-        لو حابب تعرف أنسب جامعة لك أو تبدأ التقديم:<br />
-        تواصل معنا على الواتساب: <strong>+39 393 632 3613</strong><br />
-        أو من خلال الفورم في صفحة الهوم.
-      </p>
     </div>
+  </section>
+
+  <!-- BACHELOR FORM SECTION -->
+  <section class="container card" style="margin-top: 30px; max-width: 900px;">
+    <h2>Request Bachelor Support</h2>
+    <p>Fill this form and we will contact you on WhatsApp to start your Bachelor application plan.</p>
+
+    <form class="lead-form" action="https://formspree.io/f/mdkbwpgq" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name_bachelor">Full Name</label>
+          <input type="text" id="name_bachelor" name="name" required placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label for="email_bachelor">Email</label>
+          <input type="email" id="email_bachelor" name="email" required placeholder="your@email.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="whatsapp_bachelor">WhatsApp Number</label>
+          <input type="text" id="whatsapp_bachelor" name="whatsapp" required placeholder="+39 393 632 3613" />
+        </div>
+        <div class="form-group">
+          <label for="level_bachelor">Current Level</label>
+          <select id="level_bachelor" name="current_level" required>
+            <option value="">Select…</option>
+            <option value="Grade 12">In last year of high school</option>
+            <option value="Finished high school">Finished high school</option>
+            <option value="IGCSE/American">IGCSE / American Diploma</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message_bachelor">Tell us about your plan</label>
+        <textarea id="message_bachelor" name="message" rows="3" placeholder="Example: I want to study engineering / medicine / business in Italy…"></textarea>
+      </div>
+
+      <button type="submit" class="primary-btn">Send Bachelor Request</button>
+      <p style="font-size:12px;margin-top:6px;">You can also contact us directly on WhatsApp: +39 393 632 3613</p>
+    </form>
   </section>
 </main>
 
