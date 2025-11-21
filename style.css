@@ -612,3 +612,48 @@ button:hover {
 .uni-links-row a {
   text-decoration: underline;
 }
+/* Internal links section */
+.internal-links-section {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.internal-links-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.internal-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.internal-links-block h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.internal-links-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.internal-links-block li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.internal-links-block a {
+  text-decoration: none;
+  color: #0d47a1;
+}
+
+.internal-links-block a:hover {
+  text-decoration: underline;
+}
+
