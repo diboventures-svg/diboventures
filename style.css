@@ -54,6 +54,26 @@ header {
   justify-content: center;
   gap: 14px;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .logo-icon {
+        height: 32px;
+        width: 32px;
+    }
+}
 
 .logo-mark {
   width: 46px;
