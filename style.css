@@ -108,7 +108,37 @@ header {
   font-size: 12px;
   opacity: 0.9;
 }
+/* Logo wrapper */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+/* Logo image */
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;   /* لو عايز حواف ناعمة */
+}
+
+/* Logo text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+}
+
+.logo-subtitle {
+  font-size: 11px;
+  opacity: 0.85;
+}
 /* Nav */
 
 nav {
