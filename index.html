@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <title>DiboVentures – Study & Scholarships in Italy</title>
 
-  <!-- Basic meta -->
+  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DiboVentures helps Arabic-speaking students apply for Bachelor, Master and scholarships in Italy. Full support with universities, documents and regional scholarships.">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="DiboVentures helps students apply for Bachelor, Master and scholarships in Italy with clear steps and multilingual support (Arabic, English, Italian, Turkish).">
   <meta name="keywords" content="DiboVentures, study in Italy, scholarships in Italy, Italian universities, bachelor Italy, master Italy, DSU scholarship">
   <link rel="canonical" href="https://diboventures.com/index.html">
 
   <!-- Google site verification -->
   <meta name="google-site-verification" content="q_pFVO3gzKgxALFefDA5wNnVRpLcmlycJuYgJYv1RRM">
 
-  <!-- Favicon & logo -->
-  <link rel="icon" type="image/png" href="dv-logo.png">
-  <link rel="apple-touch-icon" href="dv-logo.png">
+  <!-- Favicon & logo (root + static) -->
+  <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
+  <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
+  <link rel="icon" type="image/png" href="static/css/images/dv-logo.png">
+  <link rel="apple-touch-icon" href="static/css/images/dv-logo.png">
   <meta name="theme-color" content="#00111d">
 
   <!-- Open Graph -->
@@ -34,55 +38,25 @@
   <!-- Main CSS file -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Extra page styling (hero, langs, payment, FAQ) -->
+  <!-- Extra styling for Home page (layout + animations + FAQ + PayPal) -->
   <style>
-    .lang-switch {
-      margin: 10px 0 16px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px;
-      border-radius: 999px;
-      background: #eef2ff;
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    html {
+      scroll-behavior: smooth;
     }
-    .lang-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #475569;
-      padding: 2px 6px;
-      border-right: 1px solid #cbd5f5;
-      margin-right: 4px;
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-    .lang-btn {
-      border: none;
-      background: transparent;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      color: #1e293b;
-      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+
+    .fade-in {
+      animation: fadeUp 0.6s ease-out both;
     }
-    .lang-btn span {
-      margin-left: 3px;
-      font-size: 11px;
-    }
-    .lang-btn.active {
-      background: #1a73e8;
-      color: #ffffff;
-      box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
-    }
-    .lang-section {
-      display: none;
-      font-size: 14px;
-      color: #374151;
-    }
-    .lang-section.active {
-      display: block;
-    }
+
+    .fade-in.delay-1 { animation-delay: 0.1s; }
+    .fade-in.delay-2 { animation-delay: 0.2s; }
+    .fade-in.delay-3 { animation-delay: 0.3s; }
 
     /* Hero layout */
     .hero-grid {
@@ -91,21 +65,13 @@
       gap: 26px;
       align-items: center;
     }
+
     @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
       }
     }
-    .hero-title {
-      font-size: 28px;
-      line-height: 1.25;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-    .hero-title span {
-      color: #1a73e8;
-    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -118,8 +84,21 @@
       font-weight: 600;
       margin-bottom: 6px;
     }
+
     .hero-badge span.flag {
       font-size: 13px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .hero-title span {
+      color: #1a73e8;
     }
 
     .hero-actions {
@@ -128,6 +107,7 @@
       gap: 10px;
       margin-top: 14px;
     }
+
     .btn-secondary {
       display: inline-flex;
       align-items: center;
@@ -141,12 +121,14 @@
       cursor: pointer;
       text-decoration: none;
       color: #1e293b;
-      transition: background 0.15s, box-shadow 0.15s, border-color 0.15s;
+      transition: background 0.15s, box-shadow 0.15s, border-color 0.15s, transform 0.15s;
     }
+
     .btn-secondary:hover {
       background: #eff6ff;
       border-color: #1d4ed8;
       box-shadow: 0 4px 10px rgba(148, 163, 184, 0.5);
+      transform: translateY(-1px);
     }
 
     .hero-image-wrap {
@@ -156,10 +138,66 @@
       border: 1px solid rgba(148, 163, 184, 0.7);
       background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 40%);
     }
+
     .hero-image-wrap img {
       width: 100%;
       display: block;
       object-fit: cover;
+    }
+
+    /* Language switch (shared) */
+    .lang-switch {
+      margin: 10px 0 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: #eef2ff;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    }
+
+    .lang-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #475569;
+      padding: 2px 6px;
+      border-right: 1px solid #cbd5f5;
+      margin-right: 4px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #1e293b;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+
+    .lang-btn span {
+      margin-left: 3px;
+      font-size: 11px;
+    }
+
+    .lang-btn.active {
+      background: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
+    }
+
+    [data-lang-block] {
+      display: none;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    [data-lang-block].active {
+      display: block;
     }
 
     /* Service cards */
@@ -168,6 +206,7 @@
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 16px;
     }
+
     .service-card {
       border-radius: 16px;
       padding: 14px 16px;
@@ -176,14 +215,13 @@
       box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
       transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     }
+
     .service-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
       border-color: #1d4ed8;
     }
-    .service-card h3 {
-      margin-bottom: 4px;
-    }
+
     .service-tag {
       display: inline-flex;
       align-items: center;
@@ -197,105 +235,180 @@
       font-weight: 600;
     }
 
-    /* Payment & QR section – two cards */
+    /* Social buttons row */
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      align-items: center;
+    }
+
+    .social-label {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 12px;
+      border: 1px dashed #cbd5f5;
+      background: #ffffff;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      color: #1e293b;
+      transition: background 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+
+    .btn-ghost:hover {
+      background: #eff6ff;
+      border-color: #1d4ed8;
+      box-shadow: 0 4px 10px rgba(148, 163, 184, 0.5);
+    }
+
+    /* Payment & PayPal (أصغر وأنيق) */
     .payment-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 20px;
+      align-items: center;
     }
+
     @media (max-width: 900px) {
       .payment-grid {
         grid-template-columns: 1fr;
       }
     }
-    .payment-card {
-      border-radius: 16px;
-      padding: 14px 16px;
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: radial-gradient(circle at top, #eff6ff 0, #ffffff 55%);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-      font-size: 14px;
-      color: #374151;
-    }
-    .payment-card h3 {
+
+    .payment-steps h3 {
       margin-top: 0;
-      margin-bottom: 6px;
-      font-size: 16px;
     }
-    .payment-card ul {
-      padding-left: 18px;
-      margin: 0 0 8px 0;
+
+    .payment-steps p {
+      font-size: 14px;
     }
-    .payment-card li {
-      margin-bottom: 4px;
-    }
-    .payment-card-note {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 6px;
-    }
-    .payment-card-right {
-      text-align: center;
-    }
-    .payment-title {
+
+    .fee-highlight {
       font-weight: 700;
-      margin-bottom: 6px;
-      font-size: 15px;
-      color: #111827;
+      color: #0f172a;
     }
-    .qr-box {
-      display: inline-block;
-      border-radius: 14px;
-      padding: 10px 12px;
-      border: 1px dashed #60a5fa;
-      background: #eff6ff;
+
+    .qr-card {
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      border: 1px solid #cbd5f5;
+      background: radial-gradient(circle at top, #eff6ff 0, #ffffff 55%);
       text-align: center;
-      margin-bottom: 6px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
     }
-    .qr-box img {
+
+    .qr-card img {
       max-width: 150px;
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      display: block;
-    }
-    .qr-note {
-      font-size: 12px;
-      color: #475569;
-      margin-top: 4px;
-    }
-
-    /* FAQ section */
-    .faq-section {
-      margin-top: 8px;
-    }
-    .faq-item {
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      padding: 10px 14px;
+      border-radius: 12px;
       margin-bottom: 8px;
     }
-    .faq-q {
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .faq-q span.icon {
-      color: #ef4444;
-    }
-    .faq-a {
-      font-size: 13px;
-      color: #4b5563;
+
+    .qr-note {
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 8px;
     }
 
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
+    .btn-paypal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: none;
+      background: #00457c;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+
+    .btn-paypal:hover {
+      background: #0369a1;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.5);
+      transform: translateY(-1px);
+    }
+
+    /* FAQ */
+    .faq-wrapper {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: #f9fafb;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .faq-header {
+      width: 100%;
+      text-align: left;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .faq-header span.icon {
+      margin-right: 8px;
+      color: #1d4ed8;
+    }
+
+    .faq-header span.chevron {
+      font-size: 12px;
+      color: #6b7280;
+      margin-left: 8px;
+    }
+
+    .faq-body {
+      display: none;
+      padding: 0 14px 10px;
+      font-size: 13px;
+      color: #374151;
+      background: #f9fafb;
+    }
+
+    .faq-item.open .faq-body {
+      display: block;
+    }
+
+    .faq-item.open .faq-header span.chevron {
+      transform: rotate(90deg);
+    }
+
+    /* Utility */
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 14px;
     }
   </style>
 
@@ -364,8 +477,8 @@
 
   <main class="page-wrap">
 
-    <!-- HERO + LANG TABS -->
-    <section class="card">
+    <!-- HERO -->
+    <section class="card fade-in">
       <div class="hero-grid">
         <div>
           <div class="hero-badge">
@@ -376,6 +489,7 @@
             With you to your <span>dream university</span> in Italy
           </h1>
 
+          <!-- LANG SWITCH -->
           <div class="lang-switch">
             <span class="lang-label">Languages</span>
             <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
@@ -384,60 +498,61 @@
             <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
           </div>
 
-          <!-- EN -->
-          <div class="lang-section active" data-lang="en">
+          <!-- EN TEXT -->
+          <div class="lang-block active" data-lang-block="en">
             <p>
-              DiboVentures helps you apply for <strong>Bachelor</strong>, <strong>Master</strong> and
-              <strong>scholarships</strong> in Italy — with clear steps, bilingual support and honest guidance.
+              DiboVentures helps you apply for <strong>Bachelor</strong>,
+              <strong>Master</strong> and <strong>scholarships</strong> in Italy –
+              with clear steps, honest advice and support in multiple languages.
             </p>
             <p>
-              You don’t have to stress about documents, deadlines and Italian websites.
-              We simplify everything, propose universities that match your profile,
-              and stay with you from application to arrival.
+              We help you choose universities that match your profile, prepare
+              all documents, and stay with you from the first message until you arrive in Italy.
             </p>
           </div>
 
-          <!-- AR -->
-          <div class="lang-section" data-lang="ar">
+          <!-- AR TEXT -->
+          <div class="lang-block" data-lang-block="ar">
             <section class="arabic-section">
               <p>
                 <strong>DiboVentures</strong> بتساعدك تقدّم على
-                <strong> بكالوريوس</strong> أو <strong>ماستر</strong> أو <strong>منح دراسية</strong> في إيطاليا،
-                بخطوات واضحة ودعم كامل بالعربي والإنجليزي.
+                <strong>بكالوريوس</strong> أو <strong>ماستر</strong> أو <strong>منح دراسية</strong> في إيطاليا،
+                بخطوات واضحة، نصايح صريحة، ودعم كامل بالعربي وباقي اللغات.
               </p>
               <p>
-                مش لازم تقلق من الورق، المواعيد، أو المواقع الإيطالية.
-                إحنا بنبسط لك كل حاجة، ونرشح لك جامعات مناسبة لمجموعك وميزانيتك،
-                وبنفضّل معاك من أول التقديم لحد ما توصل بإذن الله.
+                بنساعدك تختار الجامعات المناسبة لمجموعك وظروفك، نجهّز الورق،
+                ونفضّل معاك من أول استشارة لحد ما توصل إيطاليا إن شاء الله.
               </p>
             </section>
           </div>
 
-          <!-- IT -->
-          <div class="lang-section" data-lang="it">
+          <!-- IT TEXT -->
+          <div class="lang-block" data-lang-block="it">
             <p>
-              <strong>DiboVentures</strong> supporta gli studenti che vogliono iscriversi a
-              <strong> laurea triennale</strong>, <strong> magistrale</strong> e ottenere
-              <strong> borse di studio</strong> in Italia.
+              <strong>DiboVentures</strong> aiuta gli studenti a candidarsi a
+              <strong>laurea triennale</strong>, <strong>magistrale</strong> e
+              <strong>borse di studio</strong> in Italia, con passaggi chiari e supporto multilingue.
             </p>
             <p>
-              Ti aiutiamo con i documenti, le scadenze e la scelta dell’università,
-              offrendo comunicazione chiara in più lingue e accompagnandoti fino all’arrivo in Italia.
-            </p>
-          </div>
-
-          <!-- TR -->
-          <div class="lang-section" data-lang="tr">
-            <p>
-              <strong>DiboVentures</strong>, İtalya’da <strong>lisans</strong>, <strong>yüksek lisans</strong>
-              ve <strong>burs başvuruları</strong> için sana adım adım destek verir.
-            </p>
-            <p>
-              Belgeler, son başvuru tarihleri ve İtalyanca siteler için endişelenmene gerek yok;
-              birlikte plan yapıyoruz ve başvurudan İtalya’ya varışına kadar yanında oluyoruz.
+              Ti consigliamo le università adatte al tuo profilo, prepariamo i documenti
+              e ti accompagniamo dalla prima consulenza fino al tuo arrivo in Italia.
             </p>
           </div>
 
+          <!-- TR TEXT -->
+          <div class="lang-block" data-lang-block="tr">
+            <p>
+              <strong>DiboVentures</strong>, İtalya’da <strong>lisans</strong>,
+              <strong>yüksek lisans</strong> ve <strong>burs başvuruları</strong> için
+              sana adım adım rehberlik eder. Birden fazla dilde destek veriyoruz.
+            </p>
+            <p>
+              Profiline uygun üniversiteleri seçmene yardım ediyor, belgeleri hazırlıyoruz
+              ve ilk mesajdan İtalya’ya varışına kadar yanında oluyoruz.
+            </p>
+          </div>
+
+          <!-- HERO BUTTONS -->
           <div class="hero-actions">
             <a href="bachelor.html" class="btn-primary">🎓 Apply for Bachelor</a>
             <a href="master.html" class="btn-secondary">🎓 Apply for Master</a>
@@ -449,17 +564,28 @@
             <strong><span class="ltr">+39 393 632 3613</span></strong> • Instagram:
             <strong>@diboventures</strong>
           </p>
+
+          <!-- Social buttons -->
+          <div class="social-row">
+            <span class="social-label">Connect with us:</span>
+            <a href="https://instagram.com/diboventures" target="_blank" class="btn-ghost" rel="noopener">
+              📸 Instagram
+            </a>
+            <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank" class="btn-ghost" rel="noopener">
+              💳 Pay via PayPal
+            </a>
+          </div>
         </div>
 
-        <div class="hero-image-wrap">
+        <div class="hero-image-wrap fade-in delay-1">
           <img src="banner.jpg" alt="DiboVentures banner – Study in Italy">
         </div>
       </div>
     </section>
 
-    <!-- SERVICES OVERVIEW -->
-    <section class="card">
-      <h2>What we help you with / إزاي بنساعدك؟</h2>
+    <!-- SERVICES -->
+    <section class="card fade-in delay-1">
+      <h2 class="section-title">What we help you with / إزاي بنساعدك؟</h2>
 
       <div class="service-grid">
         <div class="service-card">
@@ -497,130 +623,508 @@
       </div>
     </section>
 
-    <!-- PAYMENT & STAGES -->
-    <section class="card">
-      <h2>Stages &amp; Fees / المراحل والتكلفة</h2>
+    <!-- PAYMENT & PAYPAL -->
+    <section class="card fade-in delay-2" id="fees">
+      <h2 class="section-title">Stages &amp; Fees / المراحل والتكلفة</h2>
+      <p class="section-subtitle">
+        Transparent fees, divided into small stages – you only continue if you’re happy with the result.
+      </p>
 
       <div class="payment-grid">
+        <div class="payment-steps">
+          <section class="arabic-section">
+            <h3>١) مرحلة التقديم والقبول الجامعي</h3>
+            <p>
+              💰 <span class="fee-highlight">350 €</span> إجمالي الخدمة:<br>
+              🔹 <strong>100 €</strong> في البداية للتقديم على أكتر من جامعة.<br>
+              🔹 <strong>250 €</strong> بعد استلام قبول جامعي رسمي (إيميل + حساب الطالب).
+            </p>
 
-        <!-- مراحل وتكلفة الخدمة -->
-        <div class="payment-card">
-          <h3>١) مرحلة القبول الجامعي</h3>
-          <ul>
-            <li>💰 التكلفة الكاملة: <span class="ltr">350 €</span></li>
-            <li>🔹 <strong>100 €</strong> في البداية للتقديم على أكثر من جامعة.</li>
-            <li>🔹 <strong>250 €</strong> بعد القبول واستلام الإيميل والباسورد.</li>
-          </ul>
+            <h3>٢) مرحلة التقديم على المنحة (DSU أو غيرها)</h3>
+            <p>
+              💰 <span class="fee-highlight">350 €</span> إجمالي الخدمة:<br>
+              🔹 <strong>150 €</strong> قبل تقديم طلب المنحة وتجهيز الورق.<br>
+              🔹 <strong>200 €</strong> بعد الحصول على منحة فعلية بإذن الله.
+            </p>
 
-          <h3>٢) مرحلة التقديم على المنحة</h3>
-          <ul>
-            <li>💰 التكلفة الكاملة: <span class="ltr">350 €</span></li>
-            <li>🔹 <strong>150 €</strong> قبل التقديم على المنحة.</li>
-            <li>🔹 <strong>200 €</strong> بعد الحصول على المنحة بإذن الله.</li>
-          </ul>
-
-          <p class="payment-card-note">
-            الدفع يكون على مراحل، عشان تكون مطمّن إن الشغل ماشي خطوة خطوة –
-            ودايمًا فيه اتفاق واضح على كل مرحلة قبل ما نبدأ.
-          </p>
+            <p style="font-size:13px; color:#4b5563;">
+              الدفع ممكن يكون عن طريق PayPal أو طرق تانية نتفق عليها سوا على واتساب،
+              والمبلغ بيتحدد حسب حالتك لو في ظروف خاصة.
+            </p>
+          </section>
         </div>
 
-        <!-- كرت PayPal / QR -->
-        <div class="payment-card payment-card-right">
-          <div class="payment-title">Pay your service fee via PayPal</div>
-
-          <div class="qr-box">
-            <img src="paypal-qr.png" alt="PayPal QR - DiboVentures" loading="lazy">
-          </div>
-
-          <div class="qr-note">
-            Scan to pay via PayPal<br>
-            أو استخدم الرابط مباشرة:
-            <br>
-            <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank">
-              paypal.me/MAHMOUDABOUDIB
+        <div>
+          <div class="qr-card">
+            <img src="paypal-qr.png" alt="PayPal QR - DiboVentures">
+            <div class="qr-note">
+              Scan to pay via PayPal<br>
+              or click the button:
+            </div>
+            <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank" class="btn-paypal" rel="noopener">
+              💳 Pay service fee via PayPal
             </a>
           </div>
-
-          <p class="payment-card-note">
-            لو محتاج طريقة دفع مختلفة (تحويل بنكي أو غيره)، تواصل معنا على
-            واتساب <span class="ltr">+39 393 632 3613</span> وهنرتّب اللي يناسبك.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="card">
-      <h2>FAQ – الأسئلة الشائعة</h2>
-
-      <div class="faq-section">
-        <div class="faq-item">
-          <div class="faq-q">
-            <span class="icon">❓</span>
-            <span>هل القبول مضمون ١٠٠٪؟</span>
-          </div>
-          <div class="faq-a">
-            لا، مفيش حد يقدر يضمن ١٠٠٪، لكن إحنا بنزود فرصك بالتقديم على أكتر من جامعة مناسبة
-            لمجموعك، وتجهيز ورق مضبوط، واحترام الـ deadlines.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q">
-            <span class="icon">❓</span>
-            <span>هل لازم أكون بعرف إيطالي عشان أقدّم؟</span>
-          </div>
-          <div class="faq-a">
-            معظم البرامج اللي بنشتغل عليها بتكون <strong>بالإنجليزي أو بالإيطالي</strong>.
-            لو برنامج إنجليزي، هتحتاج شهادة لغة (زي IELTS / TOEFL أو غيرها).
-            لو برنامج بالإيطالي، هتحتاج مستوى كويس في اللغة و/أو كورس لغة قبل السفر.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q">
-            <span class="icon">❓</span>
-            <span>إمتى أبدأ التقديم؟</span>
-          </div>
-          <div class="faq-a">
-            الأفضل تبدأ بدري قبل مواعيد الجامعات بوقت كويس عشان نلحق نجهّز كل حاجة بهدوء،
-            خصوصًا ترجمة الورق، الأبليكيشن أونلاين، واختيار الجامعات.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q">
-            <span class="icon">❓</span>
-            <span>هل لازم أدفع المبلغ كامل من البداية؟</span>
-          </div>
-          <div class="faq-a">
-            لأ، الدفع متقسّم على مراحل: جزء مع بداية التقديم، والباقي بعد القبول
-            أو بعد الحصول على المنحة – زي ما هو موضّح في قسم
-            <strong>Stages &amp; Fees</strong> فوق.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q">
-            <span class="icon">❓</span>
-            <span>إزاي أبدأ معاكم؟</span>
-          </div>
-          <div class="faq-a">
-            ابعت لنا رسالة على واتساب
-            <span class="ltr">+39 393 632 3613</span>
-            أو استخدم فورم التواصل في صفحة
-            <a href="contact.html">Contact</a>، واحنا هنرجعلك بتفاصيل حالتك
-            والخطوات المناسبة ليك.
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- QUICK LINKS TO INFO PAGES -->
-    <section class="card">
-      <h2>Explore more about studying in Italy</h2>
+    <!-- FAQ (4 languages, 10 Qs) -->
+    <section class="card fade-in delay-3" id="faq">
+      <h2 class="section-title">FAQ – الأسئلة الشائعة</h2>
+      <p class="section-subtitle">
+        Change language from the top (EN / AR / IT / TR) – الأسئلة تتغيّر مع اختيار اللغة.
+      </p>
+
+      <!-- EN FAQ -->
+      <div class="faq-wrapper lang-block active" data-lang-block="en">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Are the programs in English or Italian?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Most universities offer programs in Italian, but many Bachelor and Master courses are fully in English.
+            We help you choose based on your language level and goals.
+          </div>
+        </div>
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Do I need an Italian language certificate?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            For English-taught programs you usually need an English certificate (IELTS / TOEFL /
+            sometimes a simple university letter). For Italian-taught programs you may need B1–B2 Italian.
+          </div>
+        </div>
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>What high school grades do I need?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            It depends on the university and the major, but usually you need
+            a pass in all subjects and preferably good grades in relevant subjects.
+            We check your case before starting.
+          </div>
+        </div>
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Is there an age limit to apply?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            For most universities there is no strict age limit, but for some scholarships younger
+            applicants have priority. We explain this clearly in the consultation.
+          </div>
+        </div>
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Is admission or scholarship 100% guaranteed?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Nobody can honestly guarantee admission or a scholarship 100%.
+            What we guarantee is that we prepare everything professionally and apply to the best options for your profile.
+          </div>
+        </div>
+        <!-- Q6 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>How much are living costs in Italy?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            It depends on the city: on average between 500–900 € per month including rent, food and transport.
+            With scholarships, your cost can drop a lot.
+          </div>
+        </div>
+        <!-- Q7 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Can I work while studying?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            International students can usually work part-time (around 20 hours/week).
+            We explain the legal rules and realistic expectations for each region.
+          </div>
+        </div>
+        <!-- Q8 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Can I apply if I am already in Italy?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Yes, we can still help with university admission and scholarships,
+            but we need to check your current documents and permit type.
+          </div>
+        </div>
+        <!-- Q9 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>How long does the process take?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            From the first contact until arrival it can take 4–10 months depending on deadlines,
+            document preparation and visa processing.
+          </div>
+        </div>
+        <!-- Q10 -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>How do we communicate and pay?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            We mainly use WhatsApp and email for updates.
+            Payments can be via PayPal or other agreed methods after we confirm everything with you.
+          </div>
+        </div>
+      </div>
+
+      <!-- AR FAQ -->
+      <div class="faq-wrapper lang-block" data-lang-block="ar">
+        <!-- نسخ الأسئلة مع مراعاة عدم ذكر أي برامج بالعربي -->
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>هل البرامج باللغة الإنجليزية أو الإيطالية؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            أغلب الجامعات برامجها بالإيطالي، لكن في برامج كتير بالكامل بالإنجليزي (بكالوريوس وماستر).
+            إحنا بنرشح لك التخصصات حسب مستوى لغتك وخططك.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>هل لازم شهادة لغة إيطالي؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            لو البرنامج بالإنجليزي غالباً هيطلبوا شهادة إنجليزي (IELTS / TOEFL أو خطاب من الجامعة).
+            لو البرنامج بالإيطالي ممكن يحتاجوا مستوى B1 أو B2 حسب الجامعة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>المجموع المطلوب كام في الثانوي؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            بيختلف حسب الجامعة والتخصص، بس المهم تكون ناجح في كل المواد،
+            وكل ما يكون المجموع أحسن كل ما الفرص تكون أعلى. بنشوف حالتك قبل ما نبدأ.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>هل في سن معين للتقديم؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            أغلب الجامعات ما عندهاش سن محدد صريح، لكن بعض المنح بتفضّل الأعمار الأصغر.
+            بنوضح لك ده كله في أول استشارة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>هل القبول أو المنحة مضمونين 100٪؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            مفيش حد يقدر يضمن قبول أو منحة 100٪. اللي نقدر نضمنه إن ورقك يكون كامل،
+            وتقديمك يتم على أحسن اختيارات مناسبة لملفك.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>تكاليف المعيشة تقريبًا كام في إيطاليا؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            بتختلف من مدينة للتانية، لكن في المتوسط من 500 لـ 900 يورو شهريًا
+            شامل السكن والأكل والمواصلات. المنح بتقلل الرقم ده بشكل كبير.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>هل مسموح أشتغل وأنا بدرس؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            في الغالب مسموح للطلاب الدوليين يشتغلوا بدوام جزئي (حوالي 20 ساعة أسبوعيًا)،
+            بنشرح لك القوانين والتفاصيل حسب المدينة والجامعة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>ينفع أقدّم لو أنا أصلًا موجود في إيطاليا؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            ينفع طبعًا، بس لازم نشوف نوع إقامتك والورق اللي معاك دلوقتي،
+            وبعدها نحدد أحسن طريقة للتقديم والجامعة المناسبة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>إجراءات التقديم بتاخد قد إيه؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            من أول استشارة لحد السفر ممكن من 4 لـ 10 شهور تقريبًا،
+            حسب مواعيد الجامعات، تجهيز الورق، والفيزا.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>إزاي بنتواصل؟ وطرق الدفع إيه؟</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body arabic-section">
+            التواصل بيكون أساسًا على WhatsApp والإيميل،
+            والدفع عن طريق PayPal أو طريقة تانية نتفق عليها بعد ما كل حاجة تكون واضحة بالنسبة لك.
+          </div>
+        </div>
+      </div>
+
+      <!-- IT FAQ (مختصر لكن واضح) -->
+      <div class="faq-wrapper lang-block" data-lang-block="it">
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>I corsi sono in inglese o in italiano?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Molti corsi sono in italiano, ma esistono anche tantissimi programmi in inglese.
+            Ti aiutiamo a scegliere in base al tuo livello linguistico.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Serve un certificato di italiano?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Per i corsi in inglese serve di solito un certificato di inglese.
+            Per i corsi in italiano può essere richiesto un livello B1–B2.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Che voto devo avere al liceo?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Dipende dall’università e dal corso, ma è importante avere la promozione
+            e buoni voti nelle materie principali.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>C’è un limite di età?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            In genere non c’è un limite di età rigido, ma alcune borse di studio
+            danno priorità ai candidati più giovani.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>L’ammissione o la borsa sono garantite al 100%?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Nessuno può garantire il 100%. Noi garantiamo una candidatura
+            completa e ben preparata alle migliori opzioni per il tuo profilo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Quanto costa vivere in Italia?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Dipende dalla città, ma in media tra 500 e 900 € al mese.
+            Con le borse le spese possono diminuire molto.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Posso lavorare mentre studio?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Sì, gli studenti internazionali possono lavorare part-time entro i limiti di legge.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Posso candidarmi se sono già in Italia?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Sì, ma dobbiamo verificare il tuo permesso di soggiorno e i documenti attuali.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Quanto dura il processo?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Di solito tra 4 e 10 mesi, in base alle scadenze, ai documenti e ai tempi del visto.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Come comunichiamo e come pago?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Comunichiamo soprattutto tramite WhatsApp ed email.
+            Il pagamento può avvenire con PayPal o altri metodi concordati.
+          </div>
+        </div>
+      </div>
+
+      <!-- TR FAQ (مختصر) -->
+      <div class="faq-wrapper lang-block" data-lang-block="tr">
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Programlar İngilizce mi, İtalyanca mı?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Çoğu program İtalyanca, fakat birçok lisans ve yüksek lisans tamamen İngilizce.
+            Dil seviyene göre en uygun bölümleri öneriyoruz.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>İtalyanca sertifikası gerekiyor mu?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            İngilizce programlar için genelde İngilizce belgesi yeterlidir.
+            İtalyanca programlar için B1–B2 seviyesi istenebilir.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Lise not ortalaması önemli mi?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Evet, özellikle ilgili derslerdeki notların iyi olması avantaj sağlar.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Yaş sınırı var mı?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Çoğu üniversite için net yaş sınırı yoktur, ancak bazı burslarda genç adaylar tercih edilir.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Kabul veya burs %100 garanti mi?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            %100 garanti vermek mümkün değil. Biz, dosyanın eksiksiz ve profesyonel hazırlanmasını garanti ediyoruz.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>İtalya’da yaşam masrafları ne kadar?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Şehre göre değişir, ortalama 500–900 € arasıdır. Burs alınca giderler ciddi şekilde azalır.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Okurken çalışabilir miyim?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Uluslararası öğrenciler genelde haftada yaklaşık 20 saat part-time çalışabilir.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Zaten İtalya’dayken başvurabilir miyim?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Evet, fakat mevcut oturum iznin ve belgelerin incelenmesi gerekir.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Süreç ne kadar sürer?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Genelde 4–10 ay arası sürer; başvuru tarihleri ve vize sürecine bağlıdır.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-header">
+            <span><span class="icon">❓</span>Nasıl iletişim kuruyoruz ve nasıl ödeme yapıyorum?</span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="faq-body">
+            Çoğunlukla WhatsApp ve e-posta kullanıyoruz.
+            Ödeme PayPal veya birlikte kararlaştırdığımız başka yöntemlerle yapılabilir.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="card fade-in delay-3">
+      <h2 class="section-title">Explore more about studying in Italy</h2>
       <ul style="font-size:14px; color:#374151;">
         <li>📚 <a href="universities.html">Universities in Italy / الجامعات</a></li>
         <li>🏙 <a href="cities.html">Cities &amp; student life / المدن والحياة الطلابية</a></li>
@@ -631,7 +1135,7 @@
 
   </main>
 
-  <!-- WhatsApp floating button -->
+  <!-- WhatsApp floating button (كما هو) -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
@@ -647,20 +1151,32 @@
     </div>
   </footer>
 
-  <!-- Language switch script -->
+  <!-- LANGUAGE + FAQ SCRIPT -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const buttons = document.querySelectorAll('.lang-btn');
-      const sections = document.querySelectorAll('.lang-section');
+      const langBlocks = document.querySelectorAll('[data-lang-block]');
+      const faqItems = document.querySelectorAll('.faq-item');
 
+      // language switch
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           const lang = btn.dataset.lang;
+
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          sections.forEach(sec => {
-            sec.classList.toggle('active', sec.dataset.lang === lang);
+
+          langBlocks.forEach(block => {
+            block.classList.toggle('active', block.dataset.langBlock === lang);
           });
+        });
+      });
+
+      // FAQ accordion
+      faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        header.addEventListener('click', () => {
+          item.classList.toggle('open');
         });
       });
     });
