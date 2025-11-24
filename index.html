@@ -272,7 +272,7 @@
       box-shadow: 0 4px 10px rgba(148, 163, 184, 0.5);
     }
 
-    /* Payment & PayPal (أصغر وأنيق) */
+    /* Payment & PayPal (بدون QR) */
     .payment-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -308,16 +308,8 @@
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
     }
 
-    .qr-card img {
-      max-width: 150px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 8px;
-    }
-
     .qr-note {
-      font-size: 11px;
+      font-size: 12px;
       color: #475569;
       margin-bottom: 8px;
     }
@@ -381,6 +373,7 @@
       font-size: 12px;
       color: #6b7280;
       margin-left: 8px;
+      transition: transform 0.15s;
     }
 
     .faq-body {
@@ -410,6 +403,12 @@
       color: #64748b;
       margin-bottom: 14px;
     }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+    }
+
   </style>
 
   <!-- Google Analytics -->
@@ -623,7 +622,7 @@
       </div>
     </section>
 
-    <!-- PAYMENT & PAYPAL -->
+    <!-- PAYMENT & PAYPAL (بدون QR) -->
     <section class="card fade-in delay-2" id="fees">
       <h2 class="section-title">Stages &amp; Fees / المراحل والتكلفة</h2>
       <p class="section-subtitle">
@@ -656,10 +655,9 @@
 
         <div>
           <div class="qr-card">
-            <img src="paypal-qr.png" alt="PayPal QR - DiboVentures">
             <div class="qr-note">
-              Scan to pay via PayPal<br>
-              or click the button:
+              You can pay your service fee securely via PayPal.  
+              اضغط على الزر لفتح صفحة الدفع مباشرة:
             </div>
             <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank" class="btn-paypal" rel="noopener">
               💳 Pay service fee via PayPal
@@ -793,7 +791,6 @@
 
       <!-- AR FAQ -->
       <div class="faq-wrapper lang-block" data-lang-block="ar">
-        <!-- نسخ الأسئلة مع مراعاة عدم ذكر أي برامج بالعربي -->
         <div class="faq-item">
           <button class="faq-header">
             <span><span class="icon">❓</span>هل البرامج باللغة الإنجليزية أو الإيطالية؟</span>
@@ -905,7 +902,7 @@
         </div>
       </div>
 
-      <!-- IT FAQ (مختصر لكن واضح) -->
+      <!-- IT FAQ -->
       <div class="faq-wrapper lang-block" data-lang-block="it">
         <div class="faq-item">
           <button class="faq-header">
@@ -1015,7 +1012,7 @@
         </div>
       </div>
 
-      <!-- TR FAQ (مختصر) -->
+      <!-- TR FAQ -->
       <div class="faq-wrapper lang-block" data-lang-block="tr">
         <div class="faq-item">
           <button class="faq-header">
@@ -1135,7 +1132,7 @@
 
   </main>
 
-  <!-- WhatsApp floating button (كما هو) -->
+  <!-- WhatsApp floating button -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
