@@ -139,6 +139,15 @@ header {
   font-size: 11px;
   opacity: 0.85;
 }
+.logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;      /* تخليها دائرية ولذيذة */
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #ffffff55;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
 /* Nav */
 
 nav {
