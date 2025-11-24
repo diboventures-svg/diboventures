@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Structured Data (Organization + Logo) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "DiboVentures",
-  "url": "https://diboventures.com/",
-  "logo": "https://diboventures.com/dv-logo.png",
-  "sameAs": [
-    "https://instagram.com/diboventures",
-    "https://www.paypal.me/MAHMOUDABOUDIB"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+39 393 632 3613",
-    "contactType": "customer service",
-    "areaServed": "Worldwide",
-    "availableLanguage": [
-      "Arabic",
-      "English",
-      "Italian",
-      "Turkish"
-    ]
-  }
-}
-</script>
-</head>
-  <!-- Favicon & App Icons -->
-<link rel="icon" href="/dv-logo.png" type="image/png" sizes="32x32">
-<link rel="shortcut icon" href="/dv-logo.png" type="image/png">
-<link rel="apple-touch-icon" href="/dv-logo.png">
-
-<!-- Social preview image -->
-<meta property="og:image" content="https://diboventures.com/dv-logo.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="1024">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
 <head>
   <meta charset="UTF-8">
   <title>Master in Italy – DiboVentures</title>
-  <!-- Favicon / Logo -->
-<link rel="icon" type="image/png" href="static/css/images/dv-logo.png">
-<link rel="apple-touch-icon" href="static/css/images/dv-logo.png">
-<meta name="theme-color" content="#00111d">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Apply for a Master degree in Italy with DiboVentures: requirements, universities, English-taught programs and scholarship guidance.">
-  <meta name="keywords" content="Master Italy, laurea magistrale, study in Italy, English master Italy, DiboVentures, Italian universities, scholarships">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for Master degree in Italy with DiboVentures. We help you choose English-taught programs, prepare documents and apply step by step with multilingual support.">
   <link rel="canonical" href="https://diboventures.com/master.html">
 
+  <!-- Favicon & logo -->
   <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
   <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
+  <meta name="theme-color" content="#00111d">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Master in Italy – DiboVentures">
-  <meta property="og:description" content="Full support for Master applications in Italy: English programs, documents, motivation letter and scholarships.">
+  <meta property="og:description" content="Full support to apply for Master programs in Italy: English-taught degrees, documents, motivation letter and scholarship path.">
   <meta property="og:url" content="https://diboventures.com/master.html">
   <meta property="og:image" content="https://diboventures.com/dv-logo.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Master in Italy – DiboVentures">
-  <meta name="twitter:description" content="Master programs in Italy for international students with Arabic guidance.">
-  <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
-
+  <!-- CSS الرئيسي -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Language tabs styling -->
+  <!-- ستايل إضافي للماستر -->
   <style>
-    .lang-switch {
-      margin: 8px 0 14px;
+    .page-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .page-hero {
+        grid-template-columns: 1fr;
+      }
+    }
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .page-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .page-title span {
+      color: #1a73e8;
+    }
+
+    /* سويتش اللغات (نفس البكالوريوس) */
+    .lang-switch {
+      margin: 10px 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
       border-radius: 999px;
       background: #eef2ff;
       box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
@@ -95,7 +83,7 @@
       background: transparent;
       font-size: 11px;
       font-weight: 600;
-      padding: 4px 9px;
+      padding: 4px 10px;
       border-radius: 999px;
       cursor: pointer;
       color: #1e293b;
@@ -110,72 +98,177 @@
       color: #ffffff;
       box-shadow: 0 3px 8px rgba(26, 115, 232, 0.5);
     }
-    .lang-section {
+    [data-lang-block] {
       display: none;
       font-size: 14px;
       color: #374151;
     }
-    .lang-section.active {
+    [data-lang-block].active {
       display: block;
     }
 
-    .req-grid {
+    .info-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 18px;
+      align-items: flex-start;
     }
     @media (max-width: 900px) {
-      .req-grid {
+      .info-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    form label {
-      display: block;
-      font-size: 13px;
-      color: #111827;
-      margin-bottom: 4px;
-      font-weight: 500;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
-    form input,
-    form select,
-    form textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #cbd5e1;
-      padding: 7px 9px;
+
+    .requirements-card {
+      border-radius: 16px;
+      padding: 12px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: #f9fafb;
       font-size: 13px;
+      color: #374151;
+    }
+    .requirements-card ul {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .steps-list li {
+      display: flex;
+      gap: 10px;
       margin-bottom: 10px;
-      box-sizing: border-box;
+      font-size: 14px;
+      color: #374151;
     }
-    form textarea {
-      min-height: 90px;
-      resize: vertical;
+    .steps-badge {
+      min-width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #1d4ed8;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .form-card {
+      border-radius: 16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top, #eff6ff 0, #ffffff 55%);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+    .form-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
     }
     .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px 14px;
+      margin-bottom: 10px;
+      font-size: 13px;
     }
+    .form-row label {
+      display: block;
+      margin-bottom: 3px;
+      color: #4b5563;
+      font-weight: 500;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #cbd5f5;
+      padding: 7px 9px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-row textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .form-note {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: none;
+      background: #1d4ed8;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .btn-submit:hover {
+      background: #1e40af;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.5);
+      transform: translateY(-1px);
+    }
+    .hint {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+    .highlight {
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+    .ltr { direction: ltr; unicode-bidi: bidi-override; }
   </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3W6WCQNRC9');
+  </script>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <div class="logo">
-  <img src="dv-logo.png" alt="DiboVentures logo" class="logo-image">
-  <div class="logo-text">
-    <div class="logo-main">
-      DIBO <span class="ventures">VENTURES</span>
-    </div>
-    <div class="logo-sub">Study &amp; Scholarships in Italy 🇮🇹</div>
-  </div>
-</div>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="dv-logo.png" alt="DiboVentures logo" class="logo-image">
+        <div class="logo-text">
+          <div class="logo-main">
+            DIBO <span class="ventures">VENTURES</span>
+          </div>
+          <div class="logo-sub">Study &amp; Scholarships in Italy 🇮🇹</div>
+        </div>
+      </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="bachelor.html">Bachelor</a>
-        <a href="master.html">Master</a>
+        <a href="master.html" class="active">Master</a>
         <a href="scholarships.html">Scholarships</a>
         <a href="universities.html">Universities</a>
         <a href="cities.html">Cities</a>
@@ -187,245 +280,258 @@
 
   <main class="page-wrap">
 
-    <!-- INTRO + LANG TABS -->
+    <!-- HERO + LANGS -->
     <section class="card">
-      <h1>Master in Italy 🇮🇹</h1>
-
-      <div class="lang-switch">
-        <span class="lang-label">Languages</span>
-        <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
-        <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
-        <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
-        <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
-      </div>
-
-      <!-- EN -->
-      <div class="lang-section active" data-lang="en">
-        <p>
-          This page is for students who already have (or are finishing) a <strong>Bachelor degree</strong>
-          and want to start a <strong>Master (Laurea Magistrale)</strong> in Italy.
-        </p>
-        <p>
-          Italy offers many Master programs taught in <strong>English</strong> and <strong>Italian</strong>,
-          with the possibility to apply for regional scholarships.
-          We help you choose the right program, prepare documents and submit strong applications.
-        </p>
-      </div>
-
-      <!-- AR -->
-      <div class="lang-section" data-lang="ar">
-        <section class="arabic-section">
-          <p>
-            الصفحة دي للطلاب اللي معاهم بالفعل <strong>بكالوريوس</strong> أو في سنة التخرج،
-            وحابين يكملوا <strong>ماجستير في إيطاليا (Laurea Magistrale)</strong>.
-          </p>
-          <p>
-            في إيطاليا برامج ماجستير كتير <strong>بالإنجليزي</strong> وبـ <strong>الإيطالي</strong>،
-            مع فرص قوية للمنح (منح الأقاليم).  
-            إحنا بنساعدك تختار البرنامج المناسب، تجهز ورقك، وتبعت أبليكيشن قوي لأكتر من جامعة.
-          </p>
-        </section>
-      </div>
-
-      <!-- IT -->
-      <div class="lang-section" data-lang="it">
-        <p>
-          Questa pagina è pensata per chi ha già una <strong>laurea triennale</strong>
-          (o sta per laurearsi) e desidera iniziare una <strong>laurea magistrale</strong> in Italia.
-        </p>
-        <p>
-          In Italia ci sono molti corsi di laurea magistrale in <strong>inglese</strong> e in
-          <strong>italiano</strong>, con la possibilità di accedere a <strong>borse di studio regionali</strong>.
-          Con DiboVentures ti aiutiamo nella scelta del corso, nella preparazione dei documenti
-          e nell’invio delle domande alle università.
-        </p>
-      </div>
-
-      <!-- TR -->
-      <div class="lang-section" data-lang="tr">
-        <p>
-          Bu sayfa, halihazırda bir <strong>lisans diploması</strong> olan veya son sınıfta olup
-          İtalya’da <strong>yüksek lisans (Laurea Magistrale)</strong> yapmak isteyen öğrenciler içindir.
-        </p>
-        <p>
-          İtalya’da <strong>İngilizce</strong> ve <strong>İtalyanca</strong> verilen pek çok yüksek lisans programı
-          ve bölgesel burs imkânları bulunmaktadır.
-          DiboVentures olarak, senin için en uygun programı seçmene, belgelerini hazırlamana
-          ve güçlü başvurular göndermene yardımcı oluyoruz.
-        </p>
-      </div>
-    </section>
-
-    <!-- REQUIREMENTS -->
-    <section class="card">
-      <h2>Requirements / المتطلبات الأساسية</h2>
-
-      <div class="req-grid">
+      <div class="page-hero">
         <div>
-          <h3>Academic requirements</h3>
-          <ul style="font-size:14px; color:#374151;">
-            <li>Bachelor degree certificate (شهادة البكالوريوس) – بالعربي ومترجمة إيطالي.</li>
-            <li>Transcript of records (بيان الدرجات) – بالإنجليزي.</li>
-            <li>Usually a minimum grade around “Good” (جيد) or better (يختلف حسب الجامعة).</li>
-            <li>Sometimes CV and Motivation Letter are required (we help you write them).</li>
-          </ul>
+          <div class="badge">
+            🎓 Master in Italy • ماستر في إيطاليا
+          </div>
+          <h1 class="page-title">
+            Master in <span>Italy</span> – English &amp; Italian programs
+          </h1>
 
-          <h3 style="margin-top:10px;">Language &amp; documents</h3>
-          <ul style="font-size:14px; color:#374151;">
-            <li>English certificate (IELTS / TOEFL) <strong>OR</strong> proof that your Bachelor was taught in English.</li>
-            <li>For Italian-taught programs: proof of Italian language level (usually B2).</li>
-            <li>Valid passport and clear scan of all pages with stamps if possible.</li>
-          </ul>
+          <!-- LANG SWITCH -->
+          <div class="lang-switch">
+            <span class="lang-label">Languages</span>
+            <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
+            <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
+            <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
+            <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
+          </div>
+
+          <!-- EN -->
+          <div class="lang-block active" data-lang-block="en">
+            <p>
+              We help you apply for <strong>Master programs in Italy</strong> (mostly taught in English),
+              choose strong universities, prepare all documents and follow up until final admission.
+            </p>
+            <p>
+              Fees and payment structure are already explained on the
+              <a href="index.html">Home page</a>. Here we focus on
+              <strong>requirements, steps and the form</strong>.
+            </p>
+          </div>
+
+          <!-- AR -->
+          <div class="lang-block" data-lang-block="ar">
+            <section class="arabic-section">
+              <p>
+                بنساعدك تقدّم على <strong>برامج ماستر في إيطاليا</strong> (غالبًا بالإنجليزي)،
+                نرشح لك جامعات قوية، نجهّز ورقك بالكامل، ونتابع معاك لحد القبول النهائي.
+              </p>
+              <p>
+                تفاصيل الأسعار وتقسيم الدفع موجودة في صفحة
+                <a href="index.html">الرئيسية</a>،
+                والصفحة دي مركّزة على <strong>الشروط والخطوات واستمارة التقديم</strong>.
+              </p>
+            </section>
+          </div>
+
+          <!-- IT -->
+          <div class="lang-block" data-lang-block="it">
+            <p>
+              Ti supportiamo nella candidatura a <strong>corsi di laurea magistrale in Italia</strong>,
+              spesso interamente in inglese: scelta delle università, preparazione dei documenti
+              e follow-up fino all’ammissione finale.
+            </p>
+            <p>
+              I costi e la struttura dei pagamenti sono già spiegati nella pagina
+              <a href="index.html">Home</a>. Qui trovi solo
+              <strong>requisiti, passaggi e modulo di richiesta</strong>.
+            </p>
+          </div>
+
+          <!-- TR -->
+          <div class="lang-block" data-lang-block="tr">
+            <p>
+              İtalya’da <strong>yüksek lisans (Master) programlarına</strong> başvurmanda sana destek oluyoruz.
+              Çoğu program İngilizce; güçlü üniversiteleri seçiyor, belgelerini hazırlıyor ve kesin kabul alıncaya kadar süreci takip ediyoruz.
+            </p>
+            <p>
+              Ücretler ve ödeme yapısı <a href="index.html">ana sayfada</a> açıklandı.
+              Bu sayfa sadece <strong>şartlar, adımlar ve başvuru formu</strong> içindir.
+            </p>
+          </div>
         </div>
 
-        <div class="arabic-section">
-          <h3>ملاحظات عن المنح والتكلفة</h3>
-          <p style="font-size:14px;">
-            ⬤ منح الأقاليم بتغطي غالبًا:
-          </p>
-          <ul style="font-size:14px; color:#374151;">
-            <li>إعفاء من رسوم الجامعة أو تخفيض كبير.</li>
-            <li>مبلغ سنوي للمصاريف (يدفع على أقساط).</li>
-            <li>أحيانًا إقامة طلابية أو مساعدة في السكن.</li>
+        <!-- REQUIREMENTS -->
+        <div class="requirements-card">
+          <h3>Master requirements / متطلبات الماجستير</h3>
+          <ul>
+            <li>✔️ Bachelor degree (شهادة بكالوريوس) مترجمة ومُوثّقة.</li>
+            <li>✔️ Transcript of records (بيان درجات مفصل) بالإنجليزي.</li>
+            <li>✔️ English certificate (IELTS / TOEFL) أو إثبات إن الدراسة كانت بالإنجليزي.</li>
+            <li>✔️ CV أكاديمي / مهني محدث.</li>
+            <li>✔️ Motivation Letter مكتوب بشكل قوي وواضح.</li>
+            <li>✔️ في بعض البرامج: خطاب أو خطابين توصية (جامعة / عمل).</li>
+            <li>✔️ جواز سفر ساري، وشرح بسيط عن خبرتك أو فترات التوقف بعد التخرج.</li>
           </ul>
-          <p style="font-size:14px;">
-            ⬤ نفس نظام المراحل:
-          </p>
-          <ul style="font-size:14px; color:#374151;">
-            <li><strong>350 €</strong> للتقديم والقبول الجامعي (100 + 250).</li>
-            <li><strong>350 €</strong> للتقديم على المنحة (150 + 200).</li>
-          </ul>
-          <p style="font-size:13px; color:#4b5563;">
-            تفاصيل الدفع وطرق التحويل بنشرحها لك بعد مراجعة حالتك على واتساب.
+          <p style="font-size:12px; color:#6b7280;">
+            لو ناقصك جزء من المتطلبات (مثلاً شهادة لغة أو CV)، بنساعدك
+            نجهّزه أو نختار برامج تناسب وضعك الحالي.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- APPLICATION FORM -->
+    <!-- STEPS + FORM -->
     <section class="card">
-      <h2>Application form / فورم التقديم على الماجستير</h2>
-      <p style="font-size:14px; color:#555;">
-        املا البيانات بدقة، وخاصةً معلومات البكالوريوس والتخصص اللي حابب تكمل فيه.
-        هنتواصل معاك على واتساب بعد مراجعة الطلب.
-      </p>
-
-      <form action="https://formspree.io/f/mdkbwpgq" method="POST">
-        <!-- علشان نميز في الإيميل إن ده فورم الماجستير -->
-        <input type="hidden" name="form-type" value="Master">
-
-        <div class="form-row">
-          <div>
-            <label>Full name (الاسم بالكامل) *</label>
-            <input type="text" name="full-name" required>
-          </div>
-
-          <div>
-            <label>Email *</label>
-            <input type="email" name="email" required>
-          </div>
+      <div class="info-grid">
+        <!-- STEPS -->
+        <div>
+          <div class="pill">🪜 خطوات التقديم على الماجستير</div>
+          <h2 style="margin-top:6px;">How we handle your Master application</h2>
+          <ul class="steps-list">
+            <li>
+              <div class="steps-badge">1</div>
+              <div>
+                <strong>Profile evaluation</strong><br>
+                نراجع شهادة البكالوريوس، التقدير، اللغة، والخبرة (لو موجودة) ونحدد
+                نوع البرامج اللي تنفعك (إدارة، هندسة، IT، علوم…).
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">2</div>
+              <div>
+                <strong>Program &amp; university selection</strong><br>
+                نرشح لك برامج ماستر قوية – غالبًا بالإنجليزي – في جامعات مناسبة
+                من ناحية التقدير والمحتوى وفرص المنح.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">3</div>
+              <div>
+                <strong>Documents, CV &amp; Motivation Letter</strong><br>
+                نساعدك في تجهيز ال-CV، كتابة وتحسين Motivation Letter،
+                وتجهيز خطاب التوصية لو مطلوب.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">4</div>
+              <div>
+                <strong>Application submission &amp; follow-up</strong><br>
+                بنقدّم في المنصات الخاصة بالجامعة، نتابع الإيميلات، ونوضح لك أي طلبات إضافية.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">5</div>
+              <div>
+                <strong>Admission, scholarship &amp; visa path</strong><br>
+                بعد القبول، بنرتب معاك خطوات المنحة، الأوراق المالية، والفيزا،
+                بالتنسيق مع صفحات <a href="scholarships.html">Scholarships</a> و
+                <a href="cities.html">Cities</a>.
+              </div>
+            </li>
+          </ul>
+          <p class="hint">
+            <span class="highlight">Note:</span>
+            في بعض الجامعات بيكون في Interview أونلاين أو Test بسيط،
+            بنساعدك تستعد له من خلال أسئلة سابقة ونصائح عملية.
+          </p>
         </div>
 
-        <div class="form-row">
-          <div>
-            <label>WhatsApp number (مع كود الدولة) *</label>
-            <input type="text" name="whatsapp" placeholder="+20..., +966..., +39..." required>
-          </div>
+        <!-- FORM -->
+        <div class="form-card">
+          <h3>Start your Master request</h3>
+          <p class="form-note">
+            Fill this form and we’ll contact you to suggest suitable Master programs
+            and explain the next steps clearly.
+          </p>
 
-          <div>
-            <label>Country / الدولة *</label>
-            <input type="text" name="country" required>
-          </div>
+          <!-- تقدر تغيّر الـ action لو عندك فورم مختلف للماستر -->
+          <form action="https://formspree.io/f/mdkbwpgq" method="POST">
+            <div class="form-row">
+              <label for="name">Full name / الاسم الكامل</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="whatsapp">WhatsApp (with country code)</label>
+              <input type="text" id="whatsapp" name="whatsapp" placeholder="+39 ..." required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email (اختياري لكن مهم)</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+              <label for="country">Current country of residence</label>
+              <input type="text" id="country" name="country" placeholder="Egypt, Morocco, Turkey, Italy...">
+            </div>
+
+            <div class="form-row">
+              <label for="bachelor">Your Bachelor degree / نوع البكالوريوس</label>
+              <input type="text" id="bachelor" name="bachelor" placeholder="Business, Computer Science, Engineering…">
+            </div>
+
+            <div class="form-row">
+              <label for="grade">Overall grade / التقدير العام</label>
+              <input type="text" id="grade" name="grade" placeholder="Good, Very Good, 2.8/4, 75%…">
+            </div>
+
+            <div class="form-row">
+              <label for="languages">Languages &amp; certificates</label>
+              <textarea id="languages" name="languages" placeholder="English B2 (IELTS 6.5), Italian A2…"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="target_programs">Preferred Master programs / البرامج المفضلة</label>
+              <textarea id="target_programs" name="target_programs" placeholder="Data Science, Management, International Relations…"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="notes">Additional notes / ملاحظات إضافية</label>
+              <textarea id="notes" name="notes" placeholder="Any gap years, work experience, questions or special situation…"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              📩 Send Master request
+            </button>
+
+            <p class="form-note" style="margin-top:8px;">
+              This form is only for an initial evaluation. We will reply on WhatsApp or email
+              to explain options, universities and the next steps before any payment.
+            </p>
+          </form>
         </div>
-
-        <div class="form-row">
-          <div>
-            <label>Bachelor university (اسم جامعة البكالوريوس) *</label>
-            <input type="text" name="bachelor-university" required>
-          </div>
-
-          <div>
-            <label>Bachelor country (دولة البكالوريوس) *</label>
-            <input type="text" name="bachelor-country" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label>Bachelor field (تخصص البكالوريوس) *</label>
-            <input type="text" name="bachelor-field" placeholder="مثال: Computer Science, Business, Engineering..." required>
-          </div>
-
-          <div>
-            <label>Graduation year (سنة التخرج) *</label>
-            <input type="text" name="graduation-year" placeholder="مثال: 2022" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label>Final grade (التقدير / المعدل) *</label>
-            <input type="text" name="bachelor-grade" placeholder="مثال: جيد، جيد جدًا، معدل 2.8/4..." required>
-          </div>
-
-          <div>
-            <label>Language level (مستوى اللغة)</label>
-            <input type="text" name="language-level" placeholder="IELTS 6.5, B2 English, B1 Italian...">
-          </div>
-        </div>
-
-        <label>
-          Preferred Master field (تخصص الماجستير المطلوب) *
-          <input type="text" name="preferred-master-field" placeholder="Data Science, Management, Engineering, Design..." required>
-        </label>
-
-        <label>
-          Preferred universities or cities (إن وُجد)
-          <input type="text" name="preferred-unis-cities" placeholder="مثال: Milan, Bologna, UNIBO, Polimi, Sapienza...">
-        </label>
-
-        <label>
-          Extra info / أي تفاصيل إضافية تحب تشرحها
-          <textarea name="extra-info" placeholder="اكتب هنا وضعك الوظيفي الحالي، أي شهادات إضافية، أو أسئلة."></textarea>
-        </label>
-
-        <button class="btn-primary" type="submit">
-          إرسال طلب الماجستير / Submit Master application
-        </button>
-      </form>
+      </div>
     </section>
 
   </main>
 
-  <!-- WhatsApp floating button -->
+  <!-- زر واتساب -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
 
   <footer>
     <div class="footer-inner">
-      <div>© DiboVentures — Master Applications for Italy</div>
+      <div>© DiboVentures — All rights reserved. • Study &amp; Scholarships in Italy</div>
       <div>
         <a href="index.html">Home</a>
         <a href="bachelor.html">Bachelor</a>
-        <a href="scholarships.html">Scholarships</a>
+        <a href="master.html">Master</a>
       </div>
     </div>
   </footer>
 
-  <!-- Language tabs script -->
+  <!-- لغة + سويتش -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const buttons = document.querySelectorAll('.lang-btn');
-      const sections = document.querySelectorAll('.lang-section');
+      const blocks = document.querySelectorAll('[data-lang-block]');
 
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           const lang = btn.dataset.lang;
+
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          sections.forEach(sec => {
-            sec.classList.toggle('active', sec.dataset.lang === lang);
+
+          blocks.forEach(block => {
+            block.classList.toggle('active', block.dataset.langBlock === lang);
           });
         });
       });
