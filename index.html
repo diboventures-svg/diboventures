@@ -40,7 +40,7 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Language switch styling (مشترك مع باقي الصفحات) -->
+  <!-- Extra styling for home (languages, hero, FAQ, payments) -->
   <style>
     .lang-switch {
       margin: 10px 0 16px;
@@ -90,7 +90,7 @@
       display: block;
     }
 
-    /* Hero تحسين */
+    /* Hero */
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -167,7 +167,7 @@
       object-fit: cover;
     }
 
-    /* Service cards في الهوم */
+    /* Service cards */
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -202,7 +202,7 @@
       font-weight: 600;
     }
 
-    /* قسم البايبال */
+    /* Payment */
     .payment-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, .9fr);
@@ -231,6 +231,28 @@
     .qr-note {
       font-size: 11px;
       color: #475569;
+    }
+
+    /* FAQ */
+    .faq-list {
+      margin-top: 10px;
+    }
+    .faq-item {
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: #f8fafc;
+    }
+    .faq-q {
+      font-weight: 600;
+      font-size: 14px;
+      color: #0f172a;
+    }
+    .faq-a {
+      font-size: 13px;
+      color: #4b5563;
+      margin-top: 4px;
     }
   </style>
 
@@ -468,6 +490,45 @@
                 paypal.me/MAHMOUDABOUDIB
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="card">
+      <h2>FAQ – الأسئلة الشائعة</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">❓ هل أقدر أقدّم لو مستواي في الإنجليزي مش قوي؟</div>
+          <div class="faq-a">
+            نعم، في برامج بالعربي/الإيطالي وفي كمان كورسات لغة قبل الدراسة.
+            بنرشح لك اختيارات مناسبة حسب مستواك وخطتك.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ هل فيه ضمان للقبول أو المنحة؟</div>
+          <div class="faq-a">
+            مفيش حد يقدر يضمن 100٪، لكن إحنا بنزود فرصتك باختيار جامعات صح،
+            تجهيز ممتاز للورق، وتقديم في أكتر من مكان.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ أبدأ التقديم إمتى؟</div>
+          <div class="faq-a">
+            الأفضل تبدأ قبلها بسنة أكاديمية تقريبًا
+            علشان يكون فيه وقت كفاية للغة، الورق، والـ deadlines.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ إزاي التواصل؟</div>
+          <div class="faq-a">
+            عن طريق WhatsApp على الرقم
+            <span class="ltr">+39 393 632 3613</span>
+            أو فورم التواصل في صفحة <a href="contact.html">Contact</a>.
           </div>
         </div>
       </div>
