@@ -1,93 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Structured Data (Organization + Logo) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "DiboVentures",
-  "url": "https://diboventures.com/",
-  "logo": "https://diboventures.com/dv-logo.png",
-  "sameAs": [
-    "https://instagram.com/diboventures",
-    "https://www.paypal.me/MAHMOUDABOUDIB"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+39 393 632 3613",
-    "contactType": "customer service",
-    "areaServed": "Worldwide",
-    "availableLanguage": [
-      "Arabic",
-      "English",
-      "Italian",
-      "Turkish"
-    ]
-  }
-}
-</script>
-</head>
-  <!-- Favicon & App Icons -->
-<link rel="icon" href="/dv-logo.png" type="image/png" sizes="32x32">
-<link rel="shortcut icon" href="/dv-logo.png" type="image/png">
-<link rel="apple-touch-icon" href="/dv-logo.png">
-
-<!-- Social preview image -->
-<meta property="og:image" content="https://diboventures.com/dv-logo.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="1024">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
 <head>
   <meta charset="UTF-8">
   <title>Scholarships in Italy – DiboVentures</title>
-  <!-- Favicon / Logo -->
-<link rel="icon" type="image/png" href="static/css/images/dv-logo.png">
-<link rel="apple-touch-icon" href="static/css/images/dv-logo.png">
-<meta name="theme-color" content="#00111d">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Scholarships and regional grants (DSU/ERSU/EDISU) in Italy for Bachelor and Master students. Requirements, bank statement, and application support with DiboVentures.">
-  <meta name="keywords" content="Italy scholarships, DSU, EDISU, ERSU, regional grants Italy, study in Italy with scholarship, DiboVentures">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scholarships and DSU in Italy with DiboVentures. We explain requirements, documents and help you apply for regional scholarships after university admission.">
   <link rel="canonical" href="https://diboventures.com/scholarships.html">
 
+  <!-- Favicon & logo -->
   <link rel="icon" type="image/png" href="https://diboventures.com/dv-logo.png">
   <link rel="apple-touch-icon" href="https://diboventures.com/dv-logo.png">
+  <meta name="theme-color" content="#00111d">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Scholarships in Italy – DiboVentures">
-  <meta property="og:description" content="Full guidance for Italian regional scholarships: documents, bank statement, and step-by-step application.">
+  <meta property="og:description" content="Full guidance to apply for scholarships and DSU in Italy: requirements, income documents and application support.">
   <meta property="og:url" content="https://diboventures.com/scholarships.html">
   <meta property="og:image" content="https://diboventures.com/dv-logo.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Scholarships in Italy – DiboVentures">
-  <meta name="twitter:description" content="DSU / regional scholarships in Italy for international students with Arabic support.">
-  <meta name="twitter:image" content="https://diboventures.com/dv-logo.png">
-
+  <!-- CSS الرئيسي -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Language tabs + layout -->
+  <!-- ستايل إضافي للمنح -->
   <style>
-    .lang-switch {
-      margin: 8px 0 14px;
+    .page-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .page-hero {
+        grid-template-columns: 1fr;
+      }
+    }
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: #fef3c7;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .page-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .page-title span {
+      color: #16a34a;
+    }
+
+    /* سويتش اللغات */
+    .lang-switch {
+      margin: 10px 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: #eef2ff;
       box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
     }
     .lang-label {
       font-size: 11px;
       text-transform: uppercase;
       font-weight: 600;
-      color: #92400e;
+      color: #475569;
       padding: 2px 6px;
-      border-right: 1px solid #fed7aa;
+      border-right: 1px solid #cbd5f5;
       margin-right: 4px;
     }
     .lang-btn {
@@ -95,10 +83,10 @@
       background: transparent;
       font-size: 11px;
       font-weight: 600;
-      padding: 4px 9px;
+      padding: 4px 10px;
       border-radius: 999px;
       cursor: pointer;
-      color: #78350f;
+      color: #1e293b;
       transition: background 0.15s, color 0.15s, box-shadow 0.15s;
     }
     .lang-btn span {
@@ -106,105 +94,193 @@
       font-size: 11px;
     }
     .lang-btn.active {
-      background: #f97316;
+      background: #16a34a;
       color: #ffffff;
-      box-shadow: 0 3px 8px rgba(249, 115, 22, 0.5);
+      box-shadow: 0 3px 8px rgba(22, 163, 74, 0.5);
     }
-    .lang-section {
+    [data-lang-block] {
       display: none;
       font-size: 14px;
       color: #374151;
     }
-    .lang-section.active {
+    [data-lang-block].active {
       display: block;
     }
 
-    .sch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-    }
-    .sch-card {
-      border-radius: 16px;
-      padding: 12px 14px;
-      border: 1px solid rgba(248, 181, 84, 0.7);
-      background: radial-gradient(circle at top, #fff7ed 0, #ffffff 60%);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-    }
-    .sch-card h3 {
-      margin-bottom: 4px;
-    }
-    .sch-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: #ffedd5;
-      color: #c2410c;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .req-grid {
+    .info-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 18px;
+      align-items: flex-start;
     }
     @media (max-width: 900px) {
-      .req-grid {
+      .info-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    form label {
-      display: block;
-      font-size: 13px;
-      color: #111827;
-      margin-bottom: 4px;
-      font-weight: 500;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
-    form input,
-    form select,
-    form textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #cbd5e1;
-      padding: 7px 9px;
+
+    .requirements-card {
+      border-radius: 16px;
+      padding: 12px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: #f9fafb;
       font-size: 13px;
+      color: #374151;
+    }
+    .requirements-card ul {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .steps-list li {
+      display: flex;
+      gap: 10px;
       margin-bottom: 10px;
-      box-sizing: border-box;
+      font-size: 14px;
+      color: #374151;
     }
-    form textarea {
-      min-height: 90px;
-      resize: vertical;
+    .steps-badge {
+      min-width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #16a34a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .note-box {
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fefce8;
+      border: 1px solid #facc15;
+      font-size: 13px;
+      color: #854d0e;
+      margin-top: 6px;
+    }
+
+    .form-card {
+      border-radius: 16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top, #ecfdf3 0, #ffffff 55%);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+    .form-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
     }
     .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px 14px;
+      margin-bottom: 10px;
+      font-size: 13px;
     }
+    .form-row label {
+      display: block;
+      margin-bottom: 3px;
+      color: #4b5563;
+      font-weight: 500;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #cbd5f5;
+      padding: 7px 9px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-row textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .form-note {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: none;
+      background: #16a34a;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .btn-submit:hover {
+      background: #15803d;
+      box-shadow: 0 8px 18px rgba(22, 163, 74, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+    .highlight {
+      color: #16a34a;
+      font-weight: 600;
+    }
+    .ltr { direction: ltr; unicode-bidi: bidi-override; }
   </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6WCQNRC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3W6WCQNRC9');
+  </script>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-   <div class="logo">
-  <img src="dv-logo.png" alt="DiboVentures logo" class="logo-image">
-  <div class="logo-text">
-    <div class="logo-main">
-      DIBO <span class="ventures">VENTURES</span>
-    </div>
-    <div class="logo-sub">Study &amp; Scholarships in Italy 🇮🇹</div>
-  </div>
-</div>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="dv-logo.png" alt="DiboVentures logo" class="logo-image">
+        <div class="logo-text">
+          <div class="logo-main">
+            DIBO <span class="ventures">VENTURES</span>
+          </div>
+          <div class="logo-sub">Study &amp; Scholarships in Italy 🇮🇹</div>
+        </div>
+      </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="bachelor.html">Bachelor</a>
         <a href="master.html">Master</a>
-        <a href="scholarships.html">Scholarships</a>
+        <a href="scholarships.html" class="active">Scholarships</a>
         <a href="universities.html">Universities</a>
         <a href="cities.html">Cities</a>
         <a href="about.html">About</a>
@@ -215,260 +291,250 @@
 
   <main class="page-wrap">
 
-    <!-- INTRO + LANG TABS -->
+    <!-- HERO + LANGS -->
     <section class="card">
-      <h1>Scholarships &amp; Regional Grants 🇮🇹</h1>
-
-      <div class="lang-switch">
-        <span class="lang-label">Languages</span>
-        <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
-        <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
-        <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
-        <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
-      </div>
-
-      <!-- EN -->
-      <div class="lang-section active" data-lang="en">
-        <p>
-          In Italy, most financial aid for students comes from <strong>regional scholarships</strong>
-          (DSU / ERSU / EDISU – depending on the region).
-          These can reduce university fees and help with living costs.
-        </p>
-        <p>
-          You must first be <strong>admitted to a university</strong>, then you apply for the scholarship of that region.
-          We help you understand the requirements and submit your application correctly.
-        </p>
-      </div>
-
-      <!-- AR -->
-      <div class="lang-section" data-lang="ar">
-        <section class="arabic-section">
-          <p>
-            في إيطاليا أغلب الدعم المادي بيكون عن طريق <strong>منح الأقاليم</strong>  
-            (زي DSU / ERSU / EDISU حسب المنطقة).  
-            المنح دي ممكن:
-          </p>
-          <ul>
-            <li>تعفيك من مصاريف الجامعة أو تقللها جدًا.</li>
-            <li>تديك مبلغ سنوي للمصاريف (يتقسم على دفعات).</li>
-            <li>وفي بعض الحالات توفر سكن طلابي أو دعم للسكن.</li>
-          </ul>
-          <p>
-            عشان تقدم على المنحة لازم الأول يكون عندك <strong>قبول جامعي</strong>،
-            وبعدها بنقدم على منحة الإقليم المناسب معاك خطوة بخطوة.
-          </p>
-        </section>
-      </div>
-
-      <!-- IT -->
-      <div class="lang-section" data-lang="it">
-        <p>
-          In Italia la maggior parte degli aiuti economici per gli studenti arriva dalle
-          <strong>borse di studio regionali</strong> (DSU, ERSU, EDISU, ecc.).
-        </p>
-        <p>
-          Di solito coprono le tasse universitarie (in tutto o in parte) e offrono un contributo per le spese di vita,
-          a volte con alloggio in residenza universitaria.
-          Prima devi essere <strong>ammesso a un’università</strong>, poi si fa domanda per la borsa della regione.
-        </p>
-      </div>
-
-      <!-- TR -->
-      <div class="lang-section" data-lang="tr">
-        <p>
-          İtalya’da öğrenciler için sağlanan mali desteğin büyük kısmı
-          <strong>bölgesel burslar</strong> (DSU / ERSU / EDISU vb.) üzerinden gelir.
-        </p>
-        <p>
-          Genellikle üniversite harçlarını azaltır veya tamamen kaldırır ve yaşam giderleri için ek ödeme sağlar.
-          Önce bir <strong>üniversiteden kabul alman</strong> gerekir, daha sonra bulunduğun bölgenin bursuna başvurursun.
-        </p>
-      </div>
-    </section>
-
-    <!-- TYPES / OVERVIEW -->
-    <section class="card">
-      <h2>Types of support / أنواع المنح</h2>
-
-      <div class="sch-grid">
-        <div class="sch-card">
-          <div class="sch-tag">💶 Fees</div>
-          <h3>Tuition fee reduction</h3>
-          <p style="font-size:14px;">
-            إعفاء كامل أو جزئي من مصاريف الجامعة حسب حالة الأسرة والدخل،
-            يختلف من إقليم للتاني ومن جامعة للتانية.
-          </p>
-        </div>
-
-        <div class="sch-card">
-          <div class="sch-tag">🏡 Housing</div>
-          <h3>Student housing support</h3>
-          <p style="font-size:14px;">
-            بعض الأقاليم توفر سكن طلابي أو مساهمة في إيجار السكن، خاصةً للطلاب الدوليين اللي جايين من بره أوروبا.
-          </p>
-        </div>
-
-        <div class="sch-card">
-          <div class="sch-tag">💰 Allowance</div>
-          <h3>Living allowance</h3>
-          <p style="font-size:14px;">
-            مبلغ سنوي يدفع على دفعات لمساعدة الطالب في الأكل والمواصلات والمصاريف اليومية،
-            أحيانًا يوصل لأكتر من ألف يورو في التيرم.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- REQUIREMENTS -->
-    <section class="card">
-      <h2>Key requirements / أهم الشروط</h2>
-
-      <div class="req-grid">
+      <div class="page-hero">
         <div>
-          <h3>Financial documents</h3>
-          <ul style="font-size:14px; color:#374151;">
-            <li>Bank statement (كشف حساب بنكي) لمدة <strong>٦ شهور</strong> سحب وإيداع.</li>
-            <li>الرصيد التقريبي المطلوب: من <strong>6000–7000 €</strong> أو ما يعادلها بالعملة المحلية.</li>
-            <li>ممكن نستخدم كشف حساب أحد الوالدين لو أنت مقيم معاهم في نفس العنوان والقيد العائلي.</li>
-            <li>أوراق إثبات دخل الأسرة (لو مطلوبة حسب الإقليم).</li>
-          </ul>
+          <div class="badge">
+            💶 Scholarships &amp; DSU • منح الأقاليم في إيطاليا
+          </div>
+          <h1 class="page-title">
+            Scholarships in <span>Italy</span> for international students
+          </h1>
 
-          <h3 style="margin-top:10px;">Timing / التوقيت</h3>
-          <ul style="font-size:14px; color:#374151;">
-            <li>التقديم على المنحة بيكون بعد القبول في الجامعة.</li>
-            <li>كل إقليم له مواعيد محددة (غالبًا في الصيف قبل بداية السنة الدراسية).</li>
-            <li>لو اتأخرنا عن الموعد، نضطر ننتظر السنة اللي بعدها.</li>
-          </ul>
+          <!-- LANG SWITCH -->
+          <div class="lang-switch">
+            <span class="lang-label">Languages</span>
+            <button class="lang-btn active" data-lang="en">EN <span>English</span></button>
+            <button class="lang-btn" data-lang="ar">AR <span>العربية</span></button>
+            <button class="lang-btn" data-lang="it">IT <span>Italiano</span></button>
+            <button class="lang-btn" data-lang="tr">TR <span>Türkçe</span></button>
+          </div>
+
+          <!-- EN -->
+          <div class="lang-block active" data-lang-block="en">
+            <p>
+              In Italy, many regions offer <strong>scholarships (DSU and others)</strong> that can
+              cover accommodation, meals and give you yearly money support – if your income is low
+              and your documents are complete.
+            </p>
+            <p>
+              This page explains the main requirements and steps.
+              Service fees and payment stages are already explained on the
+              <a href="index.html">Home page</a>.
+            </p>
+          </div>
+
+          <!-- AR -->
+          <div class="lang-block" data-lang-block="ar">
+            <section class="arabic-section">
+              <p>
+                في إيطاليا في <strong>منح أقاليم (DSU) ومنح تانية</strong> ممكن تغطي:
+                السكن الطلابي، وجبات في المطعم الجامعي، ومبلغ سنوي يساعدك في المعيشة،
+                بشرط إن <strong>دخل الأسرة قليل</strong> وورقك كامل.
+              </p>
+              <p>
+                هنا هنشرح <strong>الشروط الأساسية وخطوات التقديم</strong>،
+                أما تفاصيل الأسعار بتاعة خدمتنا فهي في صفحة
+                <a href="index.html">الرئيسية</a>.
+              </p>
+            </section>
+          </div>
+
+          <!-- IT -->
+          <div class="lang-block" data-lang-block="it">
+            <p>
+              In molte regioni italiane esistono <strong>borse di studio (DSU e simili)</strong>
+              che possono coprire alloggio, mensa e una parte delle spese di vita,
+              se il reddito familiare è basso e i documenti sono completi.
+            </p>
+            <p>
+              In questa pagina spieghiamo requisiti e passaggi principali.
+              Le nostre tariffe di servizio sono descritte nella pagina
+              <a href="index.html">Home</a>.
+            </p>
+          </div>
+
+          <!-- TR -->
+          <div class="lang-block" data-lang-block="tr">
+            <p>
+              İtalya’da birçok bölgede <strong>DSU ve benzeri burslar</strong> vardır.
+              Bu burslar; yurt, yemek ve yıllık maddi destek sağlayabilir;
+              tabii ailenin geliri düşükse ve belgeler doğru hazırlanmışsa.
+            </p>
+            <p>
+              Bu sayfada temel <strong>şartlar ve adımlar</strong>ı açıklıyoruz.
+              Hizmet ücretlerimiz <a href="index.html">ana sayfada</a> yer alıyor.
+            </p>
+          </div>
         </div>
 
-        <div class="arabic-section">
-          <h3>مراحل الخدمة والتكلفة</h3>
-          <p style="font-size:14px;">
-            ⬤ <strong>المرحلة الأولى – قبول جامعي</strong>  
-            (التقديم على الجامعات واستخراج القبول):  
-            التكلفة الكاملة: <span class="ltr">350 €</span>  
-            🔹 <strong>100 €</strong> عند بداية التقديم.  
-            🔹 <strong>250 €</strong> بعد القبول واستلام بيانات الجامعة.
-          </p>
-          <p style="font-size:14px;">
-            ⬤ <strong>المرحلة الثانية – التقديم على المنحة</strong>  
-            التكلفة الكاملة: <span class="ltr">350 €</span>  
-            🔹 <strong>150 €</strong> قبل تقديم ملف المنحة.  
-            🔹 <strong>200 €</strong> بعد الحصول على المنحة بإذن الله.
-          </p>
-          <p style="font-size:13px; color:#4b5563;">
-            الدفع متاح عن طريق PayPal:
-            <a href="https://www.paypal.me/MAHMOUDABOUDIB" target="_blank">
-              paypal.me/MAHMOUDABOUDIB
-            </a>
-            أو طرق أخرى نتفق عليها عبر واتساب.
+        <!-- REQUIREMENTS CARD -->
+        <div class="requirements-card">
+          <h3>Basic scholarship requirements</h3>
+          <ul>
+            <li>✔️ Official proof of family income for the last year (شهادة دخل / مفردات مرتب / ضرائب).</li>
+            <li>✔️ Bank statement (كشف حساب بنكي) لآخر 6 شهور – يفضّل يكون فيه حركة واقعية.</li>
+            <li>✔️ Sometimes minimum amount in the account (مثلاً ما يعادل 6–7 آلاف يورو للأسرة كلها).</li>
+            <li>✔️ Family composition certificate (قيد عائلي / شهادة أسرة) حسب الدولة.</li>
+            <li>✔️ Translation of all documents to Italian + legalisation (وزارة خارجية، سفارة إلخ).</li>
+            <li>✔️ University admission (قبول جامعي) أو تسجيل مبدئي قبل فتح باب المنحة.</li>
+          </ul>
+          <p style="font-size:12px; color:#6b7280;">
+            مش لازم يكون عندك كل حاجة جاهزة دلوقتي، نقدر نقول لك إيه اللي ناقص
+            وإزاي تحضّره بأقل تكلفة ممكنة في بلدك.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- APPLICATION FORM -->
+    <!-- STEPS + FORM -->
     <section class="card">
-      <h2>Scholarship interest form / فورم طلب التقديم على المنحة</h2>
-      <p style="font-size:14px; color:#555;">
-        الفورم ده مش بديل عن ورق المنحة الرسمي، لكنه خطوة أولى عشان نفهم وضعك
-        ونقول لك هل عندك فرصة كويسة ولا لأ، وإيه أفضل خطة نتحرك بيها.
-      </p>
+      <div class="info-grid">
+        <!-- STEPS -->
+        <div>
+          <div class="pill">🪜 Steps to apply for scholarships / خطوات التقديم على المنحة</div>
+          <h2 style="margin-top:6px;">How we help with DSU &amp; regional scholarships</h2>
+          <ul class="steps-list">
+            <li>
+              <div class="steps-badge">1</div>
+              <div>
+                <strong>Check if you’re eligible</strong><br>
+                نراجع معاك دخل الأسرة، عدد أفراد الأسرة، ووضعك الدراسي
+                عشان نعرف هل ليك فرصة قوية في المنح ولا لأ.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">2</div>
+              <div>
+                <strong>Plan documents in your country</strong><br>
+                بنقول لك بالضبط إيه الشهادات اللي لازم تطلعها (دخل – ضرائب – قيد عائلي)،
+                وإزاي توثّقها وتترجمها صح.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">3</div>
+              <div>
+                <strong>Coordinate with your university &amp; region</strong><br>
+                كل إقليم في إيطاليا له نظام مختلف للمنح، بننسّق بين قبولك الجامعي
+                ومواعيد التقديم على المنحة في نفس الإقليم.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">4</div>
+              <div>
+                <strong>Online application &amp; follow-up</strong><br>
+                بنساعدك تملأ طلب المنحة أونلاين (DSU أو غيرها)، ترفع كل المستندات بشكل صحيح،
+                وتتابع أي إيميلات أو طلبات إضافية.
+              </div>
+            </li>
+            <li>
+              <div class="steps-badge">5</div>
+              <div>
+                <strong>Result, appeal &amp; next steps</strong><br>
+                بعد نتيجة المنحة، بنشرح لك القرار ومعناه، ولو في مشكلة أو رفض جزئي،
+                بنشوف هل ينفع نعمل تظلم (appeal) ولا لأ.
+              </div>
+            </li>
+          </ul>
 
-      <form action="https://formspree.io/f/mdkbwpgq" method="POST">
-        <!-- علشان نميز في الإيميل إن ده فورم المنح -->
-        <input type="hidden" name="form-type" value="Scholarship">
-
-        <div class="form-row">
-          <div>
-            <label>Full name (الاسم بالكامل) *</label>
-            <input type="text" name="full-name" required>
+          <div class="note-box">
+            <strong>Important:</strong>
+            وجود كشف حساب بنكي أو دخل مش معناه رفض تلقائي.
+            المهم إن الورق يكون واضح ومتناسق، وبنساعدك تشرح وضعك الحقيقي بأفضل طريقة ممكنة.
           </div>
 
-          <div>
-            <label>Email *</label>
-            <input type="email" name="email" required>
-          </div>
+          <p class="hint">
+            لمزيد من الفهم عن المدن والحياة الطلابية، شوف صفحة
+            <a href="cities.html">Cities</a>،
+            وللجامعات شوف
+            <a href="universities.html">Universities</a>.
+          </p>
         </div>
 
-        <div class="form-row">
-          <div>
-            <label>WhatsApp number (مع كود الدولة) *</label>
-            <input type="text" name="whatsapp" placeholder="+20..., +966..., +39..." required>
-          </div>
+        <!-- FORM -->
+        <div class="form-card">
+          <h3>Scholarship &amp; DSU evaluation form</h3>
+          <p class="form-note">
+            This form is only to understand your financial and family situation.
+            We will tell you honestly if scholarships are realistic for you or not.
+          </p>
 
-          <div>
-            <label>Country / الدولة *</label>
-            <input type="text" name="country" required>
-          </div>
+          <!-- ممكن تستخدم نفس Formspree أو تعمل endpoint جديد للمنح -->
+          <form action="https://formspree.io/f/mdkbwpgq" method="POST">
+            <div class="form-row">
+              <label for="name">Full name / الاسم الكامل</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="whatsapp">WhatsApp (with country code)</label>
+              <input type="text" id="whatsapp" name="whatsapp" placeholder="+39 ..." required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email (اختياري)</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+              <label for="country">Country of residence / دولة الإقامة</label>
+              <input type="text" id="country" name="country" placeholder="Egypt, Morocco, Turkey, Italy...">
+            </div>
+
+            <div class="form-row">
+              <label for="family">Family size / عدد أفراد الأسرة</label>
+              <input type="text" id="family" name="family" placeholder="مثال: 5 أفراد (الأب، الأم، 3 أبناء)…">
+            </div>
+
+            <div class="form-row">
+              <label for="income">Estimated family income per year</label>
+              <textarea id="income" name="income" placeholder="Short description of parents’ jobs, salary range, any other income…"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="bank">Bank account situation / وضع الحساب البنكي</label>
+              <textarea id="bank" name="bank" placeholder="Do you have a bank account? How much movement? Any savings?"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="admission">Do you already have university admission?</label>
+              <select id="admission" name="admission">
+                <option value="">Choose…</option>
+                <option value="no">No, I don’t have admission yet</option>
+                <option value="applied">I already applied, waiting for result</option>
+                <option value="yes">Yes, I already have an offer</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="notes">Additional notes / ملاحظات إضافية</label>
+              <textarea id="notes" name="notes" placeholder="Any debts, special family situation, or questions about scholarships…"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              💶 Send scholarship request
+            </button>
+
+            <p class="form-note" style="margin-top:8px;">
+              We will reply on WhatsApp or email and tell you if scholarships are realistic in your case,
+              and which regions or universities fit your profile.
+            </p>
+          </form>
         </div>
-
-        <div class="form-row">
-          <div>
-            <label>Have you been accepted to a university in Italy? *</label>
-            <select name="has-acceptance" required>
-              <option value="">اختر...</option>
-              <option value="yes">Yes / نعم</option>
-              <option value="no">No / لأ، لسه</option>
-              <option value="in-process">In process / تحت التقديم</option>
-            </select>
-          </div>
-
-          <div>
-            <label>If yes, which university? (اسم الجامعة إن وجد)</label>
-            <input type="text" name="accepted-university">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label>Approximate bank balance (الرصيد التقريبي) *</label>
-            <input type="text" name="bank-balance" placeholder="مثال: 6000 €, 7000 €, أقل من 5000 €..." required>
-          </div>
-
-          <div>
-            <label>Account owner (صاحب الحساب البنكي) *</label>
-            <select name="account-owner" required>
-              <option value="">اختر...</option>
-              <option value="student">Student / الطالب</option>
-              <option value="father">Father / الأب</option>
-              <option value="mother">Mother / الأم</option>
-              <option value="other">Other / آخر</option>
-            </select>
-          </div>
-        </div>
-
-        <label>
-          Do you live with your parents in the same house?  
-          (هل تسكن مع الأسرة في نفس المنزل؟) *
-          <select name="live-with-parents" required>
-            <option value="">اختر...</option>
-            <option value="yes">Yes / نعم</option>
-            <option value="no">No / لأ</option>
-          </select>
-        </label>
-
-        <label>
-          Extra info / أي تفاصيل إضافية عن وضعك المالي أو سؤالك
-          <textarea name="extra-info" placeholder="اكتب هنا أي تفاصيل إضافية عن دخلكم، عدد أفراد الأسرة، أو أي سؤال عن المنحة."></textarea>
-        </label>
-
-        <button class="btn-primary" type="submit">
-          إرسال طلب المنحة / Submit scholarship request
-        </button>
-      </form>
+      </div>
     </section>
 
   </main>
 
-  <!-- WhatsApp floating button -->
+  <!-- زر واتساب -->
   <a href="https://wa.me/393936323613" class="whatsapp-float" target="_blank" rel="noopener">
     💬 WhatsApp <span class="ltr">+39 393 632 3613</span>
   </a>
 
   <footer>
     <div class="footer-inner">
-      <div>© DiboVentures — Scholarships &amp; Financial Aid for Italy</div>
+      <div>© DiboVentures — All rights reserved. • Study &amp; Scholarships in Italy</div>
       <div>
         <a href="index.html">Home</a>
         <a href="bachelor.html">Bachelor</a>
@@ -477,19 +543,21 @@
     </div>
   </footer>
 
-  <!-- Language tabs script -->
+  <!-- لغة + سويتش -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const buttons = document.querySelectorAll('.lang-btn');
-      const sections = document.querySelectorAll('.lang-section');
+      const blocks = document.querySelectorAll('[data-lang-block]');
 
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
           const lang = btn.dataset.lang;
+
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          sections.forEach(sec => {
-            sec.classList.toggle('active', sec.dataset.lang === lang);
+
+          blocks.forEach(block => {
+            block.classList.toggle('active', block.dataset.langBlock === lang);
           });
         });
       });
