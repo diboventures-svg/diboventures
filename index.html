@@ -1129,6 +1129,38 @@
         <li>📩 <a href="contact.html">Contact form &amp; WhatsApp / تواصل معنا</a></li>
       </ul>
     </section>
+    <!-- STATISTICS -->
+<section class="card fade-in delay-1">
+  <h2 class="section-title">Our Impact</h2>
+
+  <p class="section-subtitle">
+    Trusted by students from different countries applying to Italy.
+  </p>
+
+  <div class="service-grid">
+
+    <div class="service-card" style="text-align:center;">
+      <h2 class="counter" data-target="350">0</h2>
+      <p>Students Helped</p>
+    </div>
+
+    <div class="service-card" style="text-align:center;">
+      <h2 class="counter" data-target="25">0</h2>
+      <p>Italian Universities</p>
+    </div>
+
+    <div class="service-card" style="text-align:center;">
+      <h2 class="counter" data-target="15">0</h2>
+      <p>Countries</p>
+    </div>
+
+    <div class="service-card" style="text-align:center;">
+      <h2 class="counter" data-target="95">0</h2>
+      <p>Success Rate %</p>
+    </div>
+
+  </div>
+</section>
 
   </main>
 
@@ -1177,6 +1209,26 @@
         });
       });
     });
+    // COUNTER ANIMATION
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+
+    const increment = target / 100;
+
+    if (current < target) {
+      counter.innerText = `${Math.ceil(current + increment)}`;
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+});
   </script>
 
 </body>
