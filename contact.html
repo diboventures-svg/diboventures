@@ -367,6 +367,23 @@
       });
     });
   </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form[action*="formspree.io"]');
 
+  if (!form) return;
+
+  form.addEventListener('submit', function () {
+    const formData = new FormData(form);
+
+    fetch('https://herself-unstirred-thieving.ngrok-free.dev/webhook/a4c8b491-d22d-4579-a31a-04885aa256ec', {
+      method: 'POST',
+      body: new URLSearchParams(formData)
+    }).catch(function (error) {
+      console.error('n8n webhook error:', error);
+    });
+  });
+});
+</script>
 </body>
 </html>
