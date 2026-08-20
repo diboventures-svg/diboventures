@@ -472,6 +472,7 @@ Scholarship rules may slightly change depending on the Italian region and univer
 
           <!-- ممكن تستخدم نفس Formspree أو تعمل endpoint جديد للمنح -->
           <form action="https://formspree.io/f/mdkbwpgq" method="POST">
+  <input type="hidden" name="form-type" value="Scholarship">
             <div class="form-row">
               <label for="name">Full name / الاسم الكامل</label>
               <input type="text" id="name" name="name" required>
@@ -573,6 +574,23 @@ Scholarship rules may slightly change depending on the Italian region and univer
       });
     });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form[action*="formspree.io"]');
 
+    if (!form) return;
+
+    form.addEventListener('submit', function () {
+      const formData = new FormData(form);
+
+      fetch('https://herself-unstirred-thieving.ngrok-free.dev/webhook/a4c8b491-d22d-4579-a31a-04885aa256ec', {
+        method: 'POST',
+        body: new URLSearchParams(formData)
+      }).catch(function (error) {
+        console.error('n8n webhook error:', error);
+      });
+    });
+  });
+</script>
 </body>
 </html>
